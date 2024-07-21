@@ -1,17 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.swagger</groupId>
-  <artifactId>swagger-java-client</artifactId>
+  <groupId>com.billabear</groupId>
+  <artifactId>java-sdk</artifactId>
   <packaging>jar</packaging>
-  <name>swagger-java-client</name>
+  <name>java-sdk</name>
   <version>1.0.0</version>
-  <url>https://github.com/swagger-api/swagger-codegen</url>
-  <description>Swagger Java</description>
+  <url>https://github.com/billabear/java-sdk</url>
+  <description>BillaBear Java SDK</description>
   <scm>
-    <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>
-    <developerConnection>scm:git:git@github.com:swagger-api/swagger-codegen.git</developerConnection>
-    <url>https://github.com/swagger-api/swagger-codegen</url>
+    <connection>scm:git:git@github.com:billabear/java-sdk.git</connection>
+    <developerConnection>scm:git:git@github.com:billabear/java-sdk.git</developerConnection>
+    <url>https://github.com/billabear/java-sdk</url>
   </scm>
   <prerequisites>
     <maven>2.2.0</maven>
@@ -27,10 +27,10 @@
 
   <developers>
     <developer>
-      <name>Swagger</name>
-      <email>apiteam@swagger.io</email>
-      <organization>Swagger</organization>
-      <organizationUrl>http://swagger.io</organizationUrl>
+      <name>BillaBear</name>
+      <email>support@billabear.com</email>
+      <organization>BillaBear</organization>
+      <organizationUrl>http://BillaBear.com</organizationUrl>
     </developer>
   </developers>
 
