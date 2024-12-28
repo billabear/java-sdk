@@ -27,7 +27,7 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.Error;
-import io.swagger.client.model.InlineResponse2002;
+import io.swagger.client.model.InlineResponse2003;
 import io.swagger.client.model.Refund;
 
 import java.lang.reflect.Type;
@@ -137,11 +137,11 @@ public class RefundsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return InlineResponse2002
+     * @return InlineResponse2003
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2002 getRefundsForCustomer(String customerId, Integer limit, String lastKey, String name) throws ApiException {
-        ApiResponse<InlineResponse2002> resp = getRefundsForCustomerWithHttpInfo(customerId, limit, lastKey, name);
+    public InlineResponse2003 getRefundsForCustomer(String customerId, Integer limit, String lastKey, String name) throws ApiException {
+        ApiResponse<InlineResponse2003> resp = getRefundsForCustomerWithHttpInfo(customerId, limit, lastKey, name);
         return resp.getData();
     }
 
@@ -152,12 +152,12 @@ public class RefundsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return ApiResponse&lt;InlineResponse2002&gt;
+     * @return ApiResponse&lt;InlineResponse2003&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2002> getRefundsForCustomerWithHttpInfo(String customerId, Integer limit, String lastKey, String name) throws ApiException {
+    public ApiResponse<InlineResponse2003> getRefundsForCustomerWithHttpInfo(String customerId, Integer limit, String lastKey, String name) throws ApiException {
         com.squareup.okhttp.Call call = getRefundsForCustomerValidateBeforeCall(customerId, limit, lastKey, name, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -172,7 +172,7 @@ public class RefundsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getRefundsForCustomerAsync(String customerId, Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2002> callback) throws ApiException {
+    public com.squareup.okhttp.Call getRefundsForCustomerAsync(String customerId, Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2003> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -194,7 +194,7 @@ public class RefundsApi {
         }
 
         com.squareup.okhttp.Call call = getRefundsForCustomerValidateBeforeCall(customerId, limit, lastKey, name, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -273,11 +273,11 @@ public class RefundsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return InlineResponse2002
+     * @return InlineResponse2003
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2002 listRefund(Integer limit, String lastKey, String name) throws ApiException {
-        ApiResponse<InlineResponse2002> resp = listRefundWithHttpInfo(limit, lastKey, name);
+    public InlineResponse2003 listRefund(Integer limit, String lastKey, String name) throws ApiException {
+        ApiResponse<InlineResponse2003> resp = listRefundWithHttpInfo(limit, lastKey, name);
         return resp.getData();
     }
 
@@ -287,12 +287,12 @@ public class RefundsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return ApiResponse&lt;InlineResponse2002&gt;
+     * @return ApiResponse&lt;InlineResponse2003&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2002> listRefundWithHttpInfo(Integer limit, String lastKey, String name) throws ApiException {
+    public ApiResponse<InlineResponse2003> listRefundWithHttpInfo(Integer limit, String lastKey, String name) throws ApiException {
         com.squareup.okhttp.Call call = listRefundValidateBeforeCall(limit, lastKey, name, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -306,7 +306,7 @@ public class RefundsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listRefundAsync(Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2002> callback) throws ApiException {
+    public com.squareup.okhttp.Call listRefundAsync(Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2003> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -328,7 +328,7 @@ public class RefundsApi {
         }
 
         com.squareup.okhttp.Call call = listRefundValidateBeforeCall(limit, lastKey, name, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

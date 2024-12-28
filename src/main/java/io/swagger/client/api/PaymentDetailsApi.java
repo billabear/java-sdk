@@ -28,7 +28,7 @@ import java.io.IOException;
 
 import io.swagger.client.model.Error;
 import io.swagger.client.model.FrontendToken;
-import io.swagger.client.model.InlineResponse2005;
+import io.swagger.client.model.InlineResponse2007;
 import io.swagger.client.model.PaymentDetails;
 
 import java.lang.reflect.Type;
@@ -259,25 +259,22 @@ public class PaymentDetailsApi {
      * Delete
      * Delete Payment Details
      * @param paymentDetailsId The id of the payment details (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String deletePaymentDetails(String paymentDetailsId) throws ApiException {
-        ApiResponse<String> resp = deletePaymentDetailsWithHttpInfo(paymentDetailsId);
-        return resp.getData();
+    public void deletePaymentDetails(String paymentDetailsId) throws ApiException {
+        deletePaymentDetailsWithHttpInfo(paymentDetailsId);
     }
 
     /**
      * Delete
      * Delete Payment Details
      * @param paymentDetailsId The id of the payment details (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> deletePaymentDetailsWithHttpInfo(String paymentDetailsId) throws ApiException {
+    public ApiResponse<Void> deletePaymentDetailsWithHttpInfo(String paymentDetailsId) throws ApiException {
         com.squareup.okhttp.Call call = deletePaymentDetailsValidateBeforeCall(paymentDetailsId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -288,7 +285,7 @@ public class PaymentDetailsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deletePaymentDetailsAsync(String paymentDetailsId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call deletePaymentDetailsAsync(String paymentDetailsId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -310,8 +307,7 @@ public class PaymentDetailsApi {
         }
 
         com.squareup.okhttp.Call call = deletePaymentDetailsValidateBeforeCall(paymentDetailsId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
     /**
@@ -391,12 +387,10 @@ public class PaymentDetailsApi {
      * Delete Payment Details
      * @param customerId The id of the customer to retrieve (required)
      * @param paymentDetailsId The id of the payment details (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String deletePaymentDetailsCustomer(String customerId, String paymentDetailsId) throws ApiException {
-        ApiResponse<String> resp = deletePaymentDetailsCustomerWithHttpInfo(customerId, paymentDetailsId);
-        return resp.getData();
+    public void deletePaymentDetailsCustomer(String customerId, String paymentDetailsId) throws ApiException {
+        deletePaymentDetailsCustomerWithHttpInfo(customerId, paymentDetailsId);
     }
 
     /**
@@ -404,13 +398,12 @@ public class PaymentDetailsApi {
      * Delete Payment Details
      * @param customerId The id of the customer to retrieve (required)
      * @param paymentDetailsId The id of the payment details (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> deletePaymentDetailsCustomerWithHttpInfo(String customerId, String paymentDetailsId) throws ApiException {
+    public ApiResponse<Void> deletePaymentDetailsCustomerWithHttpInfo(String customerId, String paymentDetailsId) throws ApiException {
         com.squareup.okhttp.Call call = deletePaymentDetailsCustomerValidateBeforeCall(customerId, paymentDetailsId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -422,7 +415,7 @@ public class PaymentDetailsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deletePaymentDetailsCustomerAsync(String customerId, String paymentDetailsId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call deletePaymentDetailsCustomerAsync(String customerId, String paymentDetailsId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -444,8 +437,7 @@ public class PaymentDetailsApi {
         }
 
         com.squareup.okhttp.Call call = deletePaymentDetailsCustomerValidateBeforeCall(customerId, paymentDetailsId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
     /**
@@ -643,11 +635,11 @@ public class PaymentDetailsApi {
      * List Customer&#x27;s Payment Details
      * List all customers &lt;br&gt;&lt;br&gt;Added in version 1.1
      * @param customerId The id of the customer to retrieve (required)
-     * @return InlineResponse2005
+     * @return InlineResponse2007
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2005 listPaymentDetails(String customerId) throws ApiException {
-        ApiResponse<InlineResponse2005> resp = listPaymentDetailsWithHttpInfo(customerId);
+    public InlineResponse2007 listPaymentDetails(String customerId) throws ApiException {
+        ApiResponse<InlineResponse2007> resp = listPaymentDetailsWithHttpInfo(customerId);
         return resp.getData();
     }
 
@@ -655,12 +647,12 @@ public class PaymentDetailsApi {
      * List Customer&#x27;s Payment Details
      * List all customers &lt;br&gt;&lt;br&gt;Added in version 1.1
      * @param customerId The id of the customer to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse2005&gt;
+     * @return ApiResponse&lt;InlineResponse2007&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2005> listPaymentDetailsWithHttpInfo(String customerId) throws ApiException {
+    public ApiResponse<InlineResponse2007> listPaymentDetailsWithHttpInfo(String customerId) throws ApiException {
         com.squareup.okhttp.Call call = listPaymentDetailsValidateBeforeCall(customerId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -672,7 +664,7 @@ public class PaymentDetailsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listPaymentDetailsAsync(String customerId, final ApiCallback<InlineResponse2005> callback) throws ApiException {
+    public com.squareup.okhttp.Call listPaymentDetailsAsync(String customerId, final ApiCallback<InlineResponse2007> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -694,7 +686,7 @@ public class PaymentDetailsApi {
         }
 
         com.squareup.okhttp.Call call = listPaymentDetailsValidateBeforeCall(customerId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -775,12 +767,10 @@ public class PaymentDetailsApi {
      * Delete Payment Details
      * @param customerId The id of the customer to retrieve (required)
      * @param paymentDetailsId The id of the payment details (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String makeDefaultPaymentDetails(String customerId, String paymentDetailsId) throws ApiException {
-        ApiResponse<String> resp = makeDefaultPaymentDetailsWithHttpInfo(customerId, paymentDetailsId);
-        return resp.getData();
+    public void makeDefaultPaymentDetails(String customerId, String paymentDetailsId) throws ApiException {
+        makeDefaultPaymentDetailsWithHttpInfo(customerId, paymentDetailsId);
     }
 
     /**
@@ -788,13 +778,12 @@ public class PaymentDetailsApi {
      * Delete Payment Details
      * @param customerId The id of the customer to retrieve (required)
      * @param paymentDetailsId The id of the payment details (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> makeDefaultPaymentDetailsWithHttpInfo(String customerId, String paymentDetailsId) throws ApiException {
+    public ApiResponse<Void> makeDefaultPaymentDetailsWithHttpInfo(String customerId, String paymentDetailsId) throws ApiException {
         com.squareup.okhttp.Call call = makeDefaultPaymentDetailsValidateBeforeCall(customerId, paymentDetailsId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -806,7 +795,7 @@ public class PaymentDetailsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call makeDefaultPaymentDetailsAsync(String customerId, String paymentDetailsId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call makeDefaultPaymentDetailsAsync(String customerId, String paymentDetailsId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -828,8 +817,7 @@ public class PaymentDetailsApi {
         }
 
         com.squareup.okhttp.Call call = makeDefaultPaymentDetailsValidateBeforeCall(customerId, paymentDetailsId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
     /**
@@ -909,12 +897,10 @@ public class PaymentDetailsApi {
      * Delete Payment Details
      * @param customerId The id of the customer to retrieve (required)
      * @param paymentDetailsId The id of the payment details (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String makeDefaultPaymentDetailsCustomer(String customerId, String paymentDetailsId) throws ApiException {
-        ApiResponse<String> resp = makeDefaultPaymentDetailsCustomerWithHttpInfo(customerId, paymentDetailsId);
-        return resp.getData();
+    public void makeDefaultPaymentDetailsCustomer(String customerId, String paymentDetailsId) throws ApiException {
+        makeDefaultPaymentDetailsCustomerWithHttpInfo(customerId, paymentDetailsId);
     }
 
     /**
@@ -922,13 +908,12 @@ public class PaymentDetailsApi {
      * Delete Payment Details
      * @param customerId The id of the customer to retrieve (required)
      * @param paymentDetailsId The id of the payment details (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> makeDefaultPaymentDetailsCustomerWithHttpInfo(String customerId, String paymentDetailsId) throws ApiException {
+    public ApiResponse<Void> makeDefaultPaymentDetailsCustomerWithHttpInfo(String customerId, String paymentDetailsId) throws ApiException {
         com.squareup.okhttp.Call call = makeDefaultPaymentDetailsCustomerValidateBeforeCall(customerId, paymentDetailsId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -940,7 +925,7 @@ public class PaymentDetailsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call makeDefaultPaymentDetailsCustomerAsync(String customerId, String paymentDetailsId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call makeDefaultPaymentDetailsCustomerAsync(String customerId, String paymentDetailsId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -962,8 +947,7 @@ public class PaymentDetailsApi {
         }
 
         com.squareup.okhttp.Call call = makeDefaultPaymentDetailsCustomerValidateBeforeCall(customerId, paymentDetailsId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
     /**

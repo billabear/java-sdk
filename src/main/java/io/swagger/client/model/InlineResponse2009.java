@@ -19,7 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.Price;
+import io.swagger.client.model.InlineResponse2009Data;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +29,11 @@ import java.util.UUID;
  * InlineResponse2009
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse2009 {
   @SerializedName("data")
-  private List<Price> data = null;
+  private List<InlineResponse2009Data> data = null;
 
   @SerializedName("has_more")
   private Boolean hasMore = null;
@@ -41,14 +41,14 @@ public class InlineResponse2009 {
   @SerializedName("last_key")
   private UUID lastKey = null;
 
-  public InlineResponse2009 data(List<Price> data) {
+  public InlineResponse2009 data(List<InlineResponse2009Data> data) {
     this.data = data;
     return this;
   }
 
-  public InlineResponse2009 addDataItem(Price dataItem) {
+  public InlineResponse2009 addDataItem(InlineResponse2009Data dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<Price>();
+      this.data = new ArrayList<InlineResponse2009Data>();
     }
     this.data.add(dataItem);
     return this;
@@ -59,11 +59,11 @@ public class InlineResponse2009 {
    * @return data
   **/
   @Schema(description = "")
-  public List<Price> getData() {
+  public List<InlineResponse2009Data> getData() {
     return data;
   }
 
-  public void setData(List<Price> data) {
+  public void setData(List<InlineResponse2009Data> data) {
     this.data = data;
   }
 

@@ -19,7 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.InlineResponse2007Data;
+import io.swagger.client.model.PaymentDetails;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +29,11 @@ import java.util.UUID;
  * InlineResponse2007
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse2007 {
   @SerializedName("data")
-  private List<InlineResponse2007Data> data = null;
+  private List<PaymentDetails> data = null;
 
   @SerializedName("has_more")
   private Boolean hasMore = null;
@@ -41,14 +41,14 @@ public class InlineResponse2007 {
   @SerializedName("last_key")
   private UUID lastKey = null;
 
-  public InlineResponse2007 data(List<InlineResponse2007Data> data) {
+  public InlineResponse2007 data(List<PaymentDetails> data) {
     this.data = data;
     return this;
   }
 
-  public InlineResponse2007 addDataItem(InlineResponse2007Data dataItem) {
+  public InlineResponse2007 addDataItem(PaymentDetails dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<InlineResponse2007Data>();
+      this.data = new ArrayList<PaymentDetails>();
     }
     this.data.add(dataItem);
     return this;
@@ -59,11 +59,11 @@ public class InlineResponse2007 {
    * @return data
   **/
   @Schema(description = "")
-  public List<InlineResponse2007Data> getData() {
+  public List<PaymentDetails> getData() {
     return data;
   }
 
-  public void setData(List<InlineResponse2007Data> data) {
+  public void setData(List<PaymentDetails> data) {
     this.data = data;
   }
 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="chargeInvoice"></a>
 # **chargeInvoice**
-> InlineResponse20012 chargeInvoice(invoiceId)
+> InlineResponse20014 chargeInvoice(invoiceId)
 
 Charge Invoice
 
@@ -40,7 +40,7 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 PaymentsApi apiInstance = new PaymentsApi();
 String invoiceId = "invoiceId_example"; // String | The id of the invoice
 try {
-    InlineResponse20012 result = apiInstance.chargeInvoice(invoiceId);
+    InlineResponse20014 result = apiInstance.chargeInvoice(invoiceId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentsApi#chargeInvoice");
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 <a name="getInvoicesForCustomer"></a>
 # **getInvoicesForCustomer**
-> InlineResponse2004 getInvoicesForCustomer(customerId)
+> InlineResponse2006 getInvoicesForCustomer(customerId)
 
 List Customer Invoices
 
@@ -205,7 +205,7 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 PaymentsApi apiInstance = new PaymentsApi();
 String customerId = "customerId_example"; // String | The id of the customer to retrieve
 try {
-    InlineResponse2004 result = apiInstance.getInvoicesForCustomer(customerId);
+    InlineResponse2006 result = apiInstance.getInvoicesForCustomer(customerId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentsApi#getInvoicesForCustomer");
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 <a name="getPaymentsForCustomer"></a>
 # **getPaymentsForCustomer**
-> InlineResponse2003 getPaymentsForCustomer(customerId, limit, lastKey, name)
+> InlineResponse2004 getPaymentsForCustomer(customerId, limit, lastKey, name)
 
 List Customer Payments
 
@@ -263,7 +263,7 @@ Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 String name = "name_example"; // String | The name to search for
 try {
-    InlineResponse2003 result = apiInstance.getPaymentsForCustomer(customerId, limit, lastKey, name);
+    InlineResponse2004 result = apiInstance.getPaymentsForCustomer(customerId, limit, lastKey, name);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentsApi#getPaymentsForCustomer");
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 <a name="listPayment"></a>
 # **listPayment**
-> InlineResponse2007 listPayment(limit, lastKey, name)
+> InlineResponse2009 listPayment(limit, lastKey, name)
 
 List
 
@@ -323,7 +323,7 @@ Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 String name = "name_example"; // String | The name to search for
 try {
-    InlineResponse2007 result = apiInstance.listPayment(limit, lastKey, name);
+    InlineResponse2009 result = apiInstance.listPayment(limit, lastKey, name);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentsApi#listPayment");
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 <a name="refundPayment"></a>
 # **refundPayment**
-> String refundPayment(body, paymentId)
+> refundPayment(body, paymentId)
 
 Refund Payment
 
@@ -381,8 +381,7 @@ PaymentsApi apiInstance = new PaymentsApi();
 IssueRefundPayment body = new IssueRefundPayment(); // IssueRefundPayment | 
 String paymentId = "paymentId_example"; // String | The id of the payment
 try {
-    String result = apiInstance.refundPayment(body, paymentId);
-    System.out.println(result);
+    apiInstance.refundPayment(body, paymentId);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentsApi#refundPayment");
     e.printStackTrace();
@@ -398,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 

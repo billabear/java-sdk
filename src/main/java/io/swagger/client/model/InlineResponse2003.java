@@ -19,7 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems;
+import io.swagger.client.model.Refund;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +29,11 @@ import java.util.UUID;
  * InlineResponse2003
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse2003 {
   @SerializedName("data")
-  private List<Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems> data = null;
+  private List<Refund> data = null;
 
   @SerializedName("has_more")
   private Boolean hasMore = null;
@@ -41,14 +41,14 @@ public class InlineResponse2003 {
   @SerializedName("last_key")
   private UUID lastKey = null;
 
-  public InlineResponse2003 data(List<Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems> data) {
+  public InlineResponse2003 data(List<Refund> data) {
     this.data = data;
     return this;
   }
 
-  public InlineResponse2003 addDataItem(Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems dataItem) {
+  public InlineResponse2003 addDataItem(Refund dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems>();
+      this.data = new ArrayList<Refund>();
     }
     this.data.add(dataItem);
     return this;
@@ -59,11 +59,11 @@ public class InlineResponse2003 {
    * @return data
   **/
   @Schema(description = "")
-  public List<Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems> getData() {
+  public List<Refund> getData() {
     return data;
   }
 
-  public void setData(List<Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems> data) {
+  public void setData(List<Refund> data) {
     this.data = data;
   }
 

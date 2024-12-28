@@ -19,88 +19,96 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.Refund;
+import io.swagger.client.model.Feature;
+import io.swagger.client.model.Limit;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 /**
  * InlineResponse2002
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse2002 {
-  @SerializedName("data")
-  private List<Refund> data = null;
+  @SerializedName("limits")
+  private List<Limit> limits = null;
 
-  @SerializedName("has_more")
-  private Boolean hasMore = null;
+  @SerializedName("features")
+  private List<Feature> features = null;
 
-  @SerializedName("last_key")
-  private UUID lastKey = null;
+  @SerializedName("user_count")
+  private Integer userCount = null;
 
-  public InlineResponse2002 data(List<Refund> data) {
-    this.data = data;
+  public InlineResponse2002 limits(List<Limit> limits) {
+    this.limits = limits;
     return this;
   }
 
-  public InlineResponse2002 addDataItem(Refund dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<Refund>();
+  public InlineResponse2002 addLimitsItem(Limit limitsItem) {
+    if (this.limits == null) {
+      this.limits = new ArrayList<Limit>();
     }
-    this.data.add(dataItem);
+    this.limits.add(limitsItem);
     return this;
   }
 
    /**
-   * Get data
-   * @return data
+   * Get limits
+   * @return limits
   **/
   @Schema(description = "")
-  public List<Refund> getData() {
-    return data;
+  public List<Limit> getLimits() {
+    return limits;
   }
 
-  public void setData(List<Refund> data) {
-    this.data = data;
+  public void setLimits(List<Limit> limits) {
+    this.limits = limits;
   }
 
-  public InlineResponse2002 hasMore(Boolean hasMore) {
-    this.hasMore = hasMore;
+  public InlineResponse2002 features(List<Feature> features) {
+    this.features = features;
+    return this;
+  }
+
+  public InlineResponse2002 addFeaturesItem(Feature featuresItem) {
+    if (this.features == null) {
+      this.features = new ArrayList<Feature>();
+    }
+    this.features.add(featuresItem);
     return this;
   }
 
    /**
-   * Get hasMore
-   * @return hasMore
+   * Get features
+   * @return features
   **/
   @Schema(description = "")
-  public Boolean isHasMore() {
-    return hasMore;
+  public List<Feature> getFeatures() {
+    return features;
   }
 
-  public void setHasMore(Boolean hasMore) {
-    this.hasMore = hasMore;
+  public void setFeatures(List<Feature> features) {
+    this.features = features;
   }
 
-  public InlineResponse2002 lastKey(UUID lastKey) {
-    this.lastKey = lastKey;
+  public InlineResponse2002 userCount(Integer userCount) {
+    this.userCount = userCount;
     return this;
   }
 
    /**
-   * Get lastKey
-   * @return lastKey
+   * Get userCount
+   * @return userCount
   **/
   @Schema(description = "")
-  public UUID getLastKey() {
-    return lastKey;
+  public Integer getUserCount() {
+    return userCount;
   }
 
-  public void setLastKey(UUID lastKey) {
-    this.lastKey = lastKey;
+  public void setUserCount(Integer userCount) {
+    this.userCount = userCount;
   }
 
 
@@ -113,14 +121,14 @@ public class InlineResponse2002 {
       return false;
     }
     InlineResponse2002 inlineResponse2002 = (InlineResponse2002) o;
-    return Objects.equals(this.data, inlineResponse2002.data) &&
-        Objects.equals(this.hasMore, inlineResponse2002.hasMore) &&
-        Objects.equals(this.lastKey, inlineResponse2002.lastKey);
+    return Objects.equals(this.limits, inlineResponse2002.limits) &&
+        Objects.equals(this.features, inlineResponse2002.features) &&
+        Objects.equals(this.userCount, inlineResponse2002.userCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, hasMore, lastKey);
+    return Objects.hash(limits, features, userCount);
   }
 
 
@@ -129,9 +137,9 @@ public class InlineResponse2002 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2002 {\n");
     
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("    hasMore: ").append(toIndentedString(hasMore)).append("\n");
-    sb.append("    lastKey: ").append(toIndentedString(lastKey)).append("\n");
+    sb.append("    limits: ").append(toIndentedString(limits)).append("\n");
+    sb.append("    features: ").append(toIndentedString(features)).append("\n");
+    sb.append("    userCount: ").append(toIndentedString(userCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

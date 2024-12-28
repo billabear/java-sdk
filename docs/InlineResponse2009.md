@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;Price&gt;**](Price.md) |  |  [optional]
+**data** | [**List&lt;InlineResponse2009Data&gt;**](InlineResponse2009Data.md) |  |  [optional]
 **hasMore** | **Boolean** |  |  [optional]
 **lastKey** | [**UUID**](UUID.md) |  |  [optional]

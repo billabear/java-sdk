@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 <a name="deletePaymentDetails"></a>
 # **deletePaymentDetails**
-> String deletePaymentDetails(paymentDetailsId)
+> deletePaymentDetails(paymentDetailsId)
 
 Delete
 
@@ -98,8 +98,7 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 PaymentDetailsApi apiInstance = new PaymentDetailsApi();
 String paymentDetailsId = "paymentDetailsId_example"; // String | The id of the payment details
 try {
-    String result = apiInstance.deletePaymentDetails(paymentDetailsId);
-    System.out.println(result);
+    apiInstance.deletePaymentDetails(paymentDetailsId);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentDetailsApi#deletePaymentDetails");
     e.printStackTrace();
@@ -114,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 
@@ -127,7 +126,7 @@ Name | Type | Description  | Notes
 
 <a name="deletePaymentDetailsCustomer"></a>
 # **deletePaymentDetailsCustomer**
-> String deletePaymentDetailsCustomer(customerId, paymentDetailsId)
+> deletePaymentDetailsCustomer(customerId, paymentDetailsId)
 
 Delete With Customer
 
@@ -154,8 +153,7 @@ PaymentDetailsApi apiInstance = new PaymentDetailsApi();
 String customerId = "customerId_example"; // String | The id of the customer to retrieve
 String paymentDetailsId = "paymentDetailsId_example"; // String | The id of the payment details
 try {
-    String result = apiInstance.deletePaymentDetailsCustomer(customerId, paymentDetailsId);
-    System.out.println(result);
+    apiInstance.deletePaymentDetailsCustomer(customerId, paymentDetailsId);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentDetailsApi#deletePaymentDetailsCustomer");
     e.printStackTrace();
@@ -171,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 
@@ -239,7 +237,7 @@ Name | Type | Description  | Notes
 
 <a name="listPaymentDetails"></a>
 # **listPaymentDetails**
-> InlineResponse2005 listPaymentDetails(customerId)
+> InlineResponse2007 listPaymentDetails(customerId)
 
 List Customer&#x27;s Payment Details
 
@@ -265,7 +263,7 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 PaymentDetailsApi apiInstance = new PaymentDetailsApi();
 String customerId = "customerId_example"; // String | The id of the customer to retrieve
 try {
-    InlineResponse2005 result = apiInstance.listPaymentDetails(customerId);
+    InlineResponse2007 result = apiInstance.listPaymentDetails(customerId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentDetailsApi#listPaymentDetails");
@@ -281,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -294,7 +292,7 @@ Name | Type | Description  | Notes
 
 <a name="makeDefaultPaymentDetails"></a>
 # **makeDefaultPaymentDetails**
-> String makeDefaultPaymentDetails(customerId, paymentDetailsId)
+> makeDefaultPaymentDetails(customerId, paymentDetailsId)
 
 Make Default
 
@@ -321,8 +319,7 @@ PaymentDetailsApi apiInstance = new PaymentDetailsApi();
 String customerId = "customerId_example"; // String | The id of the customer to retrieve
 String paymentDetailsId = "paymentDetailsId_example"; // String | The id of the payment details
 try {
-    String result = apiInstance.makeDefaultPaymentDetails(customerId, paymentDetailsId);
-    System.out.println(result);
+    apiInstance.makeDefaultPaymentDetails(customerId, paymentDetailsId);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentDetailsApi#makeDefaultPaymentDetails");
     e.printStackTrace();
@@ -338,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 
@@ -351,7 +348,7 @@ Name | Type | Description  | Notes
 
 <a name="makeDefaultPaymentDetailsCustomer"></a>
 # **makeDefaultPaymentDetailsCustomer**
-> String makeDefaultPaymentDetailsCustomer(customerId, paymentDetailsId)
+> makeDefaultPaymentDetailsCustomer(customerId, paymentDetailsId)
 
 Make Default With Customer
 
@@ -378,8 +375,7 @@ PaymentDetailsApi apiInstance = new PaymentDetailsApi();
 String customerId = "customerId_example"; // String | The id of the customer to retrieve
 String paymentDetailsId = "paymentDetailsId_example"; // String | The id of the payment details
 try {
-    String result = apiInstance.makeDefaultPaymentDetailsCustomer(customerId, paymentDetailsId);
-    System.out.println(result);
+    apiInstance.makeDefaultPaymentDetailsCustomer(customerId, paymentDetailsId);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentDetailsApi#makeDefaultPaymentDetailsCustomer");
     e.printStackTrace();
@@ -395,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 

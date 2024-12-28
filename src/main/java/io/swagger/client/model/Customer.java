@@ -27,7 +27,7 @@ import java.util.UUID;
  * Customer
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class Customer {
   @SerializedName("id")
@@ -151,6 +151,52 @@ public class Customer {
 
   @SerializedName("brand")
   private String brand = null;
+
+  /**
+   * Choice between &#x27;pdf&#x27; and &#x27;xrechnung&#x27;. &lt;strong&gt;Since 2024.02.01&lt;/strong&gt;
+   */
+  @JsonAdapter(InvoiceFormatEnum.Adapter.class)
+  public enum InvoiceFormatEnum {
+    @SerializedName("pdf")
+    PDF("pdf"),
+    @SerializedName("xrechnung")
+    XRECHNUNG("xrechnung");
+
+    private String value;
+
+    InvoiceFormatEnum(String value) {
+      this.value = value;
+    }
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+    public static InvoiceFormatEnum fromValue(String input) {
+      for (InvoiceFormatEnum b : InvoiceFormatEnum.values()) {
+        if (b.value.equals(input)) {
+          return b;
+        }
+      }
+      return null;
+    }
+    public static class Adapter extends TypeAdapter<InvoiceFormatEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final InvoiceFormatEnum enumeration) throws IOException {
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
+      }
+
+      @Override
+      public InvoiceFormatEnum read(final JsonReader jsonReader) throws IOException {
+        Object value = jsonReader.nextString();
+        return InvoiceFormatEnum.fromValue((String)(value));
+      }
+    }
+  }  @SerializedName("invoice_format")
+  private InvoiceFormatEnum invoiceFormat = null;
 
   public Customer id(UUID id) {
     this.id = id;
@@ -368,6 +414,24 @@ public class Customer {
     this.brand = brand;
   }
 
+  public Customer invoiceFormat(InvoiceFormatEnum invoiceFormat) {
+    this.invoiceFormat = invoiceFormat;
+    return this;
+  }
+
+   /**
+   * Choice between &#x27;pdf&#x27; and &#x27;xrechnung&#x27;. &lt;strong&gt;Since 2024.02.01&lt;/strong&gt;
+   * @return invoiceFormat
+  **/
+  @Schema(example = "pdf", description = "Choice between 'pdf' and 'xrechnung'. <strong>Since 2024.02.01</strong>")
+  public InvoiceFormatEnum getInvoiceFormat() {
+    return invoiceFormat;
+  }
+
+  public void setInvoiceFormat(InvoiceFormatEnum invoiceFormat) {
+    this.invoiceFormat = invoiceFormat;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -389,12 +453,13 @@ public class Customer {
         Objects.equals(this.externalReference, customer.externalReference) &&
         Objects.equals(this.address, customer.address) &&
         Objects.equals(this.locale, customer.locale) &&
-        Objects.equals(this.brand, customer.brand);
+        Objects.equals(this.brand, customer.brand) &&
+        Objects.equals(this.invoiceFormat, customer.invoiceFormat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, email, taxNumber, standardTaxRate, digitalTaxRate, billingType, type, reference, externalReference, address, locale, brand);
+    return Objects.hash(id, email, taxNumber, standardTaxRate, digitalTaxRate, billingType, type, reference, externalReference, address, locale, brand, invoiceFormat);
   }
 
 
@@ -415,6 +480,7 @@ public class Customer {
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    brand: ").append(toIndentedString(brand)).append("\n");
+    sb.append("    invoiceFormat: ").append(toIndentedString(invoiceFormat)).append("\n");
     sb.append("}");
     return sb.toString();
   }

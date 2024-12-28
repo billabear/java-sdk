@@ -19,7 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.PaymentDetails;
+import io.swagger.client.model.UsageLimit;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +29,11 @@ import java.util.UUID;
  * InlineResponse2005
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse2005 {
   @SerializedName("data")
-  private List<PaymentDetails> data = null;
+  private List<UsageLimit> data = null;
 
   @SerializedName("has_more")
   private Boolean hasMore = null;
@@ -41,14 +41,14 @@ public class InlineResponse2005 {
   @SerializedName("last_key")
   private UUID lastKey = null;
 
-  public InlineResponse2005 data(List<PaymentDetails> data) {
+  public InlineResponse2005 data(List<UsageLimit> data) {
     this.data = data;
     return this;
   }
 
-  public InlineResponse2005 addDataItem(PaymentDetails dataItem) {
+  public InlineResponse2005 addDataItem(UsageLimit dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<PaymentDetails>();
+      this.data = new ArrayList<UsageLimit>();
     }
     this.data.add(dataItem);
     return this;
@@ -59,11 +59,11 @@ public class InlineResponse2005 {
    * @return data
   **/
   @Schema(description = "")
-  public List<PaymentDetails> getData() {
+  public List<UsageLimit> getData() {
     return data;
   }
 
-  public void setData(List<PaymentDetails> data) {
+  public void setData(List<UsageLimit> data) {
     this.data = data;
   }
 

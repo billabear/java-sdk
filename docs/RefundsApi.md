@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getRefundsForCustomer"></a>
 # **getRefundsForCustomer**
-> InlineResponse2002 getRefundsForCustomer(customerId, limit, lastKey, name)
+> InlineResponse2003 getRefundsForCustomer(customerId, limit, lastKey, name)
 
 List Customer Refunds
 
@@ -39,7 +39,7 @@ Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 String name = "name_example"; // String | The name to search for
 try {
-    InlineResponse2002 result = apiInstance.getRefundsForCustomer(customerId, limit, lastKey, name);
+    InlineResponse2003 result = apiInstance.getRefundsForCustomer(customerId, limit, lastKey, name);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling RefundsApi#getRefundsForCustomer");
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 <a name="listRefund"></a>
 # **listRefund**
-> InlineResponse2002 listRefund(limit, lastKey, name)
+> InlineResponse2003 listRefund(limit, lastKey, name)
 
 List
 
@@ -99,7 +99,7 @@ Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 String name = "name_example"; // String | The name to search for
 try {
-    InlineResponse2002 result = apiInstance.listRefund(limit, lastKey, name);
+    InlineResponse2003 result = apiInstance.listRefund(limit, lastKey, name);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling RefundsApi#listRefund");
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

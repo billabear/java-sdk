@@ -28,7 +28,7 @@ import java.util.UUID;
  * Subscription
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class Subscription {
   @SerializedName("id")
@@ -60,6 +60,9 @@ public class Subscription {
 
   @SerializedName("child_external_reference")
   private String childExternalReference = null;
+
+  @SerializedName("metadata")
+  private OneOfSubscriptionMetadata metadata = null;
 
   @SerializedName("price")
   private Price price = null;
@@ -247,6 +250,24 @@ public class Subscription {
     this.childExternalReference = childExternalReference;
   }
 
+  public Subscription metadata(OneOfSubscriptionMetadata metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+   /**
+   * Get metadata
+   * @return metadata
+  **/
+  @Schema(description = "")
+  public OneOfSubscriptionMetadata getMetadata() {
+    return metadata;
+  }
+
+  public void setMetadata(OneOfSubscriptionMetadata metadata) {
+    this.metadata = metadata;
+  }
+
   public Subscription price(Price price) {
     this.price = price;
     return this;
@@ -303,13 +324,14 @@ public class Subscription {
         Objects.equals(this.validUntil, subscription.validUntil) &&
         Objects.equals(this.mainExternalReference, subscription.mainExternalReference) &&
         Objects.equals(this.childExternalReference, subscription.childExternalReference) &&
+        Objects.equals(this.metadata, subscription.metadata) &&
         Objects.equals(this.price, subscription.price) &&
         Objects.equals(this.plan, subscription.plan);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, seatNumber, schedule, status, createdAt, updatedAt, endedAt, validUntil, mainExternalReference, childExternalReference, price, plan);
+    return Objects.hash(id, seatNumber, schedule, status, createdAt, updatedAt, endedAt, validUntil, mainExternalReference, childExternalReference, metadata, price, plan);
   }
 
 
@@ -328,6 +350,7 @@ public class Subscription {
     sb.append("    validUntil: ").append(toIndentedString(validUntil)).append("\n");
     sb.append("    mainExternalReference: ").append(toIndentedString(mainExternalReference)).append("\n");
     sb.append("    childExternalReference: ").append(toIndentedString(childExternalReference)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("    plan: ").append(toIndentedString(plan)).append("\n");
     sb.append("}");

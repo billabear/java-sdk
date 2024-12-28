@@ -19,8 +19,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.Feature;
-import io.swagger.client.model.Limit;
+import io.swagger.client.model.Cost;
+import io.swagger.client.model.MetricCost;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,86 +29,57 @@ import java.util.List;
  * InlineResponse2001
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse2001 {
-  @SerializedName("limits")
-  private List<Limit> limits = null;
+  @SerializedName("costs")
+  private List<MetricCost> costs = null;
 
-  @SerializedName("features")
-  private List<Feature> features = null;
+  @SerializedName("cost")
+  private Cost cost = null;
 
-  @SerializedName("user_count")
-  private Integer userCount = null;
-
-  public InlineResponse2001 limits(List<Limit> limits) {
-    this.limits = limits;
+  public InlineResponse2001 costs(List<MetricCost> costs) {
+    this.costs = costs;
     return this;
   }
 
-  public InlineResponse2001 addLimitsItem(Limit limitsItem) {
-    if (this.limits == null) {
-      this.limits = new ArrayList<Limit>();
+  public InlineResponse2001 addCostsItem(MetricCost costsItem) {
+    if (this.costs == null) {
+      this.costs = new ArrayList<MetricCost>();
     }
-    this.limits.add(limitsItem);
+    this.costs.add(costsItem);
     return this;
   }
 
    /**
-   * Get limits
-   * @return limits
+   * Get costs
+   * @return costs
   **/
   @Schema(description = "")
-  public List<Limit> getLimits() {
-    return limits;
+  public List<MetricCost> getCosts() {
+    return costs;
   }
 
-  public void setLimits(List<Limit> limits) {
-    this.limits = limits;
+  public void setCosts(List<MetricCost> costs) {
+    this.costs = costs;
   }
 
-  public InlineResponse2001 features(List<Feature> features) {
-    this.features = features;
-    return this;
-  }
-
-  public InlineResponse2001 addFeaturesItem(Feature featuresItem) {
-    if (this.features == null) {
-      this.features = new ArrayList<Feature>();
-    }
-    this.features.add(featuresItem);
+  public InlineResponse2001 cost(Cost cost) {
+    this.cost = cost;
     return this;
   }
 
    /**
-   * Get features
-   * @return features
+   * Get cost
+   * @return cost
   **/
   @Schema(description = "")
-  public List<Feature> getFeatures() {
-    return features;
+  public Cost getCost() {
+    return cost;
   }
 
-  public void setFeatures(List<Feature> features) {
-    this.features = features;
-  }
-
-  public InlineResponse2001 userCount(Integer userCount) {
-    this.userCount = userCount;
-    return this;
-  }
-
-   /**
-   * Get userCount
-   * @return userCount
-  **/
-  @Schema(description = "")
-  public Integer getUserCount() {
-    return userCount;
-  }
-
-  public void setUserCount(Integer userCount) {
-    this.userCount = userCount;
+  public void setCost(Cost cost) {
+    this.cost = cost;
   }
 
 
@@ -121,14 +92,13 @@ public class InlineResponse2001 {
       return false;
     }
     InlineResponse2001 inlineResponse2001 = (InlineResponse2001) o;
-    return Objects.equals(this.limits, inlineResponse2001.limits) &&
-        Objects.equals(this.features, inlineResponse2001.features) &&
-        Objects.equals(this.userCount, inlineResponse2001.userCount);
+    return Objects.equals(this.costs, inlineResponse2001.costs) &&
+        Objects.equals(this.cost, inlineResponse2001.cost);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(limits, features, userCount);
+    return Objects.hash(costs, cost);
   }
 
 
@@ -137,9 +107,8 @@ public class InlineResponse2001 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2001 {\n");
     
-    sb.append("    limits: ").append(toIndentedString(limits)).append("\n");
-    sb.append("    features: ").append(toIndentedString(features)).append("\n");
-    sb.append("    userCount: ").append(toIndentedString(userCount)).append("\n");
+    sb.append("    costs: ").append(toIndentedString(costs)).append("\n");
+    sb.append("    cost: ").append(toIndentedString(cost)).append("\n");
     sb.append("}");
     return sb.toString();
   }

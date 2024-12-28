@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="createProduct"></a>
 # **createProduct**
-> String createProduct(body)
+> createProduct(body)
 
 Create
 
@@ -37,8 +37,7 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 ProductsApi apiInstance = new ProductsApi();
 Product body = new Product(); // Product | 
 try {
-    String result = apiInstance.createProduct(body);
-    System.out.println(result);
+    apiInstance.createProduct(body);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProductsApi#createProduct");
     e.printStackTrace();
@@ -53,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 
@@ -66,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="listProduct"></a>
 # **listProduct**
-> InlineResponse2008 listProduct(limit, lastKey, name)
+> InlineResponse20010 listProduct(limit, lastKey, name)
 
 List
 
@@ -94,7 +93,7 @@ Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 String name = "name_example"; // String | The name to search for
 try {
-    InlineResponse2008 result = apiInstance.listProduct(limit, lastKey, name);
+    InlineResponse20010 result = apiInstance.listProduct(limit, lastKey, name);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProductsApi#listProduct");
@@ -112,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 

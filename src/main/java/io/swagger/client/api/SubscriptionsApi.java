@@ -27,9 +27,9 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.Error;
-import io.swagger.client.model.InlineResponse20010;
-import io.swagger.client.model.InlineResponse20011;
-import io.swagger.client.model.InlineResponse2006;
+import io.swagger.client.model.InlineResponse20012;
+import io.swagger.client.model.InlineResponse20013;
+import io.swagger.client.model.InlineResponse2008;
 import io.swagger.client.model.SeatsAddBody;
 import io.swagger.client.model.SeatsRemoveBody;
 import io.swagger.client.model.Subscription;
@@ -141,11 +141,11 @@ public class SubscriptionsApi {
      * Adds seats to a per seat subscription&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1.4&lt;/strong&gt;
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return InlineResponse20011
+     * @return InlineResponse20013
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20011 addSeatsSubscriptions(SeatsAddBody body, String subscriptionId) throws ApiException {
-        ApiResponse<InlineResponse20011> resp = addSeatsSubscriptionsWithHttpInfo(body, subscriptionId);
+    public InlineResponse20013 addSeatsSubscriptions(SeatsAddBody body, String subscriptionId) throws ApiException {
+        ApiResponse<InlineResponse20013> resp = addSeatsSubscriptionsWithHttpInfo(body, subscriptionId);
         return resp.getData();
     }
 
@@ -154,12 +154,12 @@ public class SubscriptionsApi {
      * Adds seats to a per seat subscription&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1.4&lt;/strong&gt;
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse20011&gt;
+     * @return ApiResponse&lt;InlineResponse20013&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20011> addSeatsSubscriptionsWithHttpInfo(SeatsAddBody body, String subscriptionId) throws ApiException {
+    public ApiResponse<InlineResponse20013> addSeatsSubscriptionsWithHttpInfo(SeatsAddBody body, String subscriptionId) throws ApiException {
         com.squareup.okhttp.Call call = addSeatsSubscriptionsValidateBeforeCall(body, subscriptionId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -172,7 +172,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call addSeatsSubscriptionsAsync(SeatsAddBody body, String subscriptionId, final ApiCallback<InlineResponse20011> callback) throws ApiException {
+    public com.squareup.okhttp.Call addSeatsSubscriptionsAsync(SeatsAddBody body, String subscriptionId, final ApiCallback<InlineResponse20013> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -194,7 +194,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = addSeatsSubscriptionsValidateBeforeCall(body, subscriptionId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -274,12 +274,10 @@ public class SubscriptionsApi {
      * Info for a specific subscription
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String cancelSubscription(SubscriptionIdCancelBody body, String subscriptionId) throws ApiException {
-        ApiResponse<String> resp = cancelSubscriptionWithHttpInfo(body, subscriptionId);
-        return resp.getData();
+    public void cancelSubscription(SubscriptionIdCancelBody body, String subscriptionId) throws ApiException {
+        cancelSubscriptionWithHttpInfo(body, subscriptionId);
     }
 
     /**
@@ -287,13 +285,12 @@ public class SubscriptionsApi {
      * Info for a specific subscription
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> cancelSubscriptionWithHttpInfo(SubscriptionIdCancelBody body, String subscriptionId) throws ApiException {
+    public ApiResponse<Void> cancelSubscriptionWithHttpInfo(SubscriptionIdCancelBody body, String subscriptionId) throws ApiException {
         com.squareup.okhttp.Call call = cancelSubscriptionValidateBeforeCall(body, subscriptionId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -305,7 +302,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call cancelSubscriptionAsync(SubscriptionIdCancelBody body, String subscriptionId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call cancelSubscriptionAsync(SubscriptionIdCancelBody body, String subscriptionId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -327,8 +324,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = cancelSubscriptionValidateBeforeCall(body, subscriptionId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
     /**
@@ -407,11 +403,11 @@ public class SubscriptionsApi {
      * Changes the price being used for a price. Useful for changing pricing schedule or just price.
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return InlineResponse20011
+     * @return InlineResponse20013
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20011 changeSubscriptionPrice(SubscriptionIdPriceBody body, String subscriptionId) throws ApiException {
-        ApiResponse<InlineResponse20011> resp = changeSubscriptionPriceWithHttpInfo(body, subscriptionId);
+    public InlineResponse20013 changeSubscriptionPrice(SubscriptionIdPriceBody body, String subscriptionId) throws ApiException {
+        ApiResponse<InlineResponse20013> resp = changeSubscriptionPriceWithHttpInfo(body, subscriptionId);
         return resp.getData();
     }
 
@@ -420,12 +416,12 @@ public class SubscriptionsApi {
      * Changes the price being used for a price. Useful for changing pricing schedule or just price.
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse20011&gt;
+     * @return ApiResponse&lt;InlineResponse20013&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20011> changeSubscriptionPriceWithHttpInfo(SubscriptionIdPriceBody body, String subscriptionId) throws ApiException {
+    public ApiResponse<InlineResponse20013> changeSubscriptionPriceWithHttpInfo(SubscriptionIdPriceBody body, String subscriptionId) throws ApiException {
         com.squareup.okhttp.Call call = changeSubscriptionPriceValidateBeforeCall(body, subscriptionId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -438,7 +434,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call changeSubscriptionPriceAsync(SubscriptionIdPriceBody body, String subscriptionId, final ApiCallback<InlineResponse20011> callback) throws ApiException {
+    public com.squareup.okhttp.Call changeSubscriptionPriceAsync(SubscriptionIdPriceBody body, String subscriptionId, final ApiCallback<InlineResponse20013> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -460,7 +456,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = changeSubscriptionPriceValidateBeforeCall(body, subscriptionId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -933,11 +929,11 @@ public class SubscriptionsApi {
      * List Customer Active Subscriptions
      * List all Active customer subscriptions
      * @param customerId The id of the customer to retrieve (required)
-     * @return InlineResponse2006
+     * @return InlineResponse2008
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2006 getActiveForCustomer(String customerId) throws ApiException {
-        ApiResponse<InlineResponse2006> resp = getActiveForCustomerWithHttpInfo(customerId);
+    public InlineResponse2008 getActiveForCustomer(String customerId) throws ApiException {
+        ApiResponse<InlineResponse2008> resp = getActiveForCustomerWithHttpInfo(customerId);
         return resp.getData();
     }
 
@@ -945,12 +941,12 @@ public class SubscriptionsApi {
      * List Customer Active Subscriptions
      * List all Active customer subscriptions
      * @param customerId The id of the customer to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse2006&gt;
+     * @return ApiResponse&lt;InlineResponse2008&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2006> getActiveForCustomerWithHttpInfo(String customerId) throws ApiException {
+    public ApiResponse<InlineResponse2008> getActiveForCustomerWithHttpInfo(String customerId) throws ApiException {
         com.squareup.okhttp.Call call = getActiveForCustomerValidateBeforeCall(customerId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -962,7 +958,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getActiveForCustomerAsync(String customerId, final ApiCallback<InlineResponse2006> callback) throws ApiException {
+    public com.squareup.okhttp.Call getActiveForCustomerAsync(String customerId, final ApiCallback<InlineResponse2008> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -984,7 +980,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = getActiveForCustomerValidateBeforeCall(customerId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1058,11 +1054,11 @@ public class SubscriptionsApi {
      * List Customer Subscriptions
      * List all customer subscriptions&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1&lt;/strong&gt;
      * @param customerId The id of the customer to retrieve (required)
-     * @return InlineResponse2006
+     * @return InlineResponse2008
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2006 getForCustomer(String customerId) throws ApiException {
-        ApiResponse<InlineResponse2006> resp = getForCustomerWithHttpInfo(customerId);
+    public InlineResponse2008 getForCustomer(String customerId) throws ApiException {
+        ApiResponse<InlineResponse2008> resp = getForCustomerWithHttpInfo(customerId);
         return resp.getData();
     }
 
@@ -1070,12 +1066,12 @@ public class SubscriptionsApi {
      * List Customer Subscriptions
      * List all customer subscriptions&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1&lt;/strong&gt;
      * @param customerId The id of the customer to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse2006&gt;
+     * @return ApiResponse&lt;InlineResponse2008&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2006> getForCustomerWithHttpInfo(String customerId) throws ApiException {
+    public ApiResponse<InlineResponse2008> getForCustomerWithHttpInfo(String customerId) throws ApiException {
         com.squareup.okhttp.Call call = getForCustomerValidateBeforeCall(customerId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1087,7 +1083,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getForCustomerAsync(String customerId, final ApiCallback<InlineResponse2006> callback) throws ApiException {
+    public com.squareup.okhttp.Call getForCustomerAsync(String customerId, final ApiCallback<InlineResponse2008> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1109,7 +1105,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = getForCustomerValidateBeforeCall(customerId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1184,11 +1180,11 @@ public class SubscriptionsApi {
      * List all subscriptions plans
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
-     * @return InlineResponse20010
+     * @return InlineResponse20012
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20010 listSubscriptionPlans(Integer limit, String lastKey) throws ApiException {
-        ApiResponse<InlineResponse20010> resp = listSubscriptionPlansWithHttpInfo(limit, lastKey);
+    public InlineResponse20012 listSubscriptionPlans(Integer limit, String lastKey) throws ApiException {
+        ApiResponse<InlineResponse20012> resp = listSubscriptionPlansWithHttpInfo(limit, lastKey);
         return resp.getData();
     }
 
@@ -1197,12 +1193,12 @@ public class SubscriptionsApi {
      * List all subscriptions plans
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
-     * @return ApiResponse&lt;InlineResponse20010&gt;
+     * @return ApiResponse&lt;InlineResponse20012&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20010> listSubscriptionPlansWithHttpInfo(Integer limit, String lastKey) throws ApiException {
+    public ApiResponse<InlineResponse20012> listSubscriptionPlansWithHttpInfo(Integer limit, String lastKey) throws ApiException {
         com.squareup.okhttp.Call call = listSubscriptionPlansValidateBeforeCall(limit, lastKey, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20010>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1215,7 +1211,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listSubscriptionPlansAsync(Integer limit, String lastKey, final ApiCallback<InlineResponse20010> callback) throws ApiException {
+    public com.squareup.okhttp.Call listSubscriptionPlansAsync(Integer limit, String lastKey, final ApiCallback<InlineResponse20012> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1237,7 +1233,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = listSubscriptionPlansValidateBeforeCall(limit, lastKey, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20010>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1312,11 +1308,11 @@ public class SubscriptionsApi {
      * List all subscriptions
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
-     * @return InlineResponse2006
+     * @return InlineResponse2008
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2006 listSubscriptions(Integer limit, String lastKey) throws ApiException {
-        ApiResponse<InlineResponse2006> resp = listSubscriptionsWithHttpInfo(limit, lastKey);
+    public InlineResponse2008 listSubscriptions(Integer limit, String lastKey) throws ApiException {
+        ApiResponse<InlineResponse2008> resp = listSubscriptionsWithHttpInfo(limit, lastKey);
         return resp.getData();
     }
 
@@ -1325,12 +1321,12 @@ public class SubscriptionsApi {
      * List all subscriptions
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
-     * @return ApiResponse&lt;InlineResponse2006&gt;
+     * @return ApiResponse&lt;InlineResponse2008&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2006> listSubscriptionsWithHttpInfo(Integer limit, String lastKey) throws ApiException {
+    public ApiResponse<InlineResponse2008> listSubscriptionsWithHttpInfo(Integer limit, String lastKey) throws ApiException {
         com.squareup.okhttp.Call call = listSubscriptionsValidateBeforeCall(limit, lastKey, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1343,7 +1339,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listSubscriptionsAsync(Integer limit, String lastKey, final ApiCallback<InlineResponse2006> callback) throws ApiException {
+    public com.squareup.okhttp.Call listSubscriptionsAsync(Integer limit, String lastKey, final ApiCallback<InlineResponse2008> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1365,7 +1361,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = listSubscriptionsValidateBeforeCall(limit, lastKey, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1445,11 +1441,11 @@ public class SubscriptionsApi {
      * Remove seats to a per seat subscription&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1.4&lt;/strong&gt;
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return InlineResponse20011
+     * @return InlineResponse20013
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20011 removeSeatsSubscriptions(SeatsRemoveBody body, String subscriptionId) throws ApiException {
-        ApiResponse<InlineResponse20011> resp = removeSeatsSubscriptionsWithHttpInfo(body, subscriptionId);
+    public InlineResponse20013 removeSeatsSubscriptions(SeatsRemoveBody body, String subscriptionId) throws ApiException {
+        ApiResponse<InlineResponse20013> resp = removeSeatsSubscriptionsWithHttpInfo(body, subscriptionId);
         return resp.getData();
     }
 
@@ -1458,12 +1454,12 @@ public class SubscriptionsApi {
      * Remove seats to a per seat subscription&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1.4&lt;/strong&gt;
      * @param body  (required)
      * @param subscriptionId The id of the subscription to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse20011&gt;
+     * @return ApiResponse&lt;InlineResponse20013&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20011> removeSeatsSubscriptionsWithHttpInfo(SeatsRemoveBody body, String subscriptionId) throws ApiException {
+    public ApiResponse<InlineResponse20013> removeSeatsSubscriptionsWithHttpInfo(SeatsRemoveBody body, String subscriptionId) throws ApiException {
         com.squareup.okhttp.Call call = removeSeatsSubscriptionsValidateBeforeCall(body, subscriptionId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1476,7 +1472,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call removeSeatsSubscriptionsAsync(SeatsRemoveBody body, String subscriptionId, final ApiCallback<InlineResponse20011> callback) throws ApiException {
+    public com.squareup.okhttp.Call removeSeatsSubscriptionsAsync(SeatsRemoveBody body, String subscriptionId, final ApiCallback<InlineResponse20013> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1498,7 +1494,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = removeSeatsSubscriptionsValidateBeforeCall(body, subscriptionId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20013>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

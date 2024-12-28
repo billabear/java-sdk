@@ -3,6 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**limits** | [**List&lt;Limit&gt;**](Limit.md) |  |  [optional]
-**features** | [**List&lt;Feature&gt;**](Feature.md) |  |  [optional]
-**userCount** | **Integer** |  |  [optional]
+**costs** | [**List&lt;MetricCost&gt;**](MetricCost.md) |  |  [optional]
+**cost** | [**Cost**](Cost.md) |  |  [optional]

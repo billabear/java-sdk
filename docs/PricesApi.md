@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="createPrice"></a>
 # **createPrice**
-> String createPrice(body, productId)
+> createPrice(body, productId)
 
 Create
 
@@ -36,8 +36,7 @@ PricesApi apiInstance = new PricesApi();
 Price body = new Price(); // Price | 
 String productId = "productId_example"; // String | The id of the product to retrieve
 try {
-    String result = apiInstance.createPrice(body, productId);
-    System.out.println(result);
+    apiInstance.createPrice(body, productId);
 } catch (ApiException e) {
     System.err.println("Exception when calling PricesApi#createPrice");
     e.printStackTrace();
@@ -53,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 
@@ -66,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="listPrice"></a>
 # **listPrice**
-> InlineResponse2009 listPrice(productId, limit, lastKey)
+> InlineResponse20011 listPrice(productId, limit, lastKey)
 
 List
 
@@ -94,7 +93,7 @@ String productId = "productId_example"; // String | The id of the product to ret
 Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 try {
-    InlineResponse2009 result = apiInstance.listPrice(productId, limit, lastKey);
+    InlineResponse20011 result = apiInstance.listPrice(productId, limit, lastKey);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PricesApi#listPrice");
@@ -112,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 

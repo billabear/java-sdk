@@ -27,7 +27,7 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.Error;
-import io.swagger.client.model.InlineResponse2008;
+import io.swagger.client.model.InlineResponse20010;
 import io.swagger.client.model.Product;
 
 import java.lang.reflect.Type;
@@ -124,25 +124,22 @@ public class ProductsApi {
      * Create
      * Create a product
      * @param body  (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String createProduct(Product body) throws ApiException {
-        ApiResponse<String> resp = createProductWithHttpInfo(body);
-        return resp.getData();
+    public void createProduct(Product body) throws ApiException {
+        createProductWithHttpInfo(body);
     }
 
     /**
      * Create
      * Create a product
      * @param body  (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> createProductWithHttpInfo(Product body) throws ApiException {
+    public ApiResponse<Void> createProductWithHttpInfo(Product body) throws ApiException {
         com.squareup.okhttp.Call call = createProductValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -153,7 +150,7 @@ public class ProductsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createProductAsync(Product body, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call createProductAsync(Product body, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -175,8 +172,7 @@ public class ProductsApi {
         }
 
         com.squareup.okhttp.Call call = createProductValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
     /**
@@ -254,11 +250,11 @@ public class ProductsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return InlineResponse2008
+     * @return InlineResponse20010
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2008 listProduct(Integer limit, String lastKey, String name) throws ApiException {
-        ApiResponse<InlineResponse2008> resp = listProductWithHttpInfo(limit, lastKey, name);
+    public InlineResponse20010 listProduct(Integer limit, String lastKey, String name) throws ApiException {
+        ApiResponse<InlineResponse20010> resp = listProductWithHttpInfo(limit, lastKey, name);
         return resp.getData();
     }
 
@@ -268,12 +264,12 @@ public class ProductsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return ApiResponse&lt;InlineResponse2008&gt;
+     * @return ApiResponse&lt;InlineResponse20010&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2008> listProductWithHttpInfo(Integer limit, String lastKey, String name) throws ApiException {
+    public ApiResponse<InlineResponse20010> listProductWithHttpInfo(Integer limit, String lastKey, String name) throws ApiException {
         com.squareup.okhttp.Call call = listProductValidateBeforeCall(limit, lastKey, name, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20010>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -287,7 +283,7 @@ public class ProductsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listProductAsync(Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2008> callback) throws ApiException {
+    public com.squareup.okhttp.Call listProductAsync(Integer limit, String lastKey, String name, final ApiCallback<InlineResponse20010> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -309,7 +305,7 @@ public class ProductsApi {
         }
 
         com.squareup.okhttp.Call call = listProductValidateBeforeCall(limit, lastKey, name, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20010>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

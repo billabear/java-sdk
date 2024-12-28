@@ -28,8 +28,8 @@ import java.io.IOException;
 
 import io.swagger.client.model.Error;
 import java.io.File;
-import io.swagger.client.model.InlineResponse20012;
-import io.swagger.client.model.InlineResponse2004;
+import io.swagger.client.model.InlineResponse20014;
+import io.swagger.client.model.InlineResponse2006;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -126,11 +126,11 @@ public class InvoicesApi {
      * Charge Invoice
      * Attempts to charge a card that is on file for the invoice amount
      * @param invoiceId The id of the invoice (required)
-     * @return InlineResponse20012
+     * @return InlineResponse20014
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20012 chargeInvoice(String invoiceId) throws ApiException {
-        ApiResponse<InlineResponse20012> resp = chargeInvoiceWithHttpInfo(invoiceId);
+    public InlineResponse20014 chargeInvoice(String invoiceId) throws ApiException {
+        ApiResponse<InlineResponse20014> resp = chargeInvoiceWithHttpInfo(invoiceId);
         return resp.getData();
     }
 
@@ -138,12 +138,12 @@ public class InvoicesApi {
      * Charge Invoice
      * Attempts to charge a card that is on file for the invoice amount
      * @param invoiceId The id of the invoice (required)
-     * @return ApiResponse&lt;InlineResponse20012&gt;
+     * @return ApiResponse&lt;InlineResponse20014&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20012> chargeInvoiceWithHttpInfo(String invoiceId) throws ApiException {
+    public ApiResponse<InlineResponse20014> chargeInvoiceWithHttpInfo(String invoiceId) throws ApiException {
         com.squareup.okhttp.Call call = chargeInvoiceValidateBeforeCall(invoiceId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -155,7 +155,7 @@ public class InvoicesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call chargeInvoiceAsync(String invoiceId, final ApiCallback<InlineResponse20012> callback) throws ApiException {
+    public com.squareup.okhttp.Call chargeInvoiceAsync(String invoiceId, final ApiCallback<InlineResponse20014> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -177,7 +177,7 @@ public class InvoicesApi {
         }
 
         com.squareup.okhttp.Call call = chargeInvoiceValidateBeforeCall(invoiceId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -376,11 +376,11 @@ public class InvoicesApi {
      * List Customer Invoices
      * List Customer Invoices
      * @param customerId The id of the customer to retrieve (required)
-     * @return InlineResponse2004
+     * @return InlineResponse2006
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2004 getInvoicesForCustomer(String customerId) throws ApiException {
-        ApiResponse<InlineResponse2004> resp = getInvoicesForCustomerWithHttpInfo(customerId);
+    public InlineResponse2006 getInvoicesForCustomer(String customerId) throws ApiException {
+        ApiResponse<InlineResponse2006> resp = getInvoicesForCustomerWithHttpInfo(customerId);
         return resp.getData();
     }
 
@@ -388,12 +388,12 @@ public class InvoicesApi {
      * List Customer Invoices
      * List Customer Invoices
      * @param customerId The id of the customer to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse2004&gt;
+     * @return ApiResponse&lt;InlineResponse2006&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2004> getInvoicesForCustomerWithHttpInfo(String customerId) throws ApiException {
+    public ApiResponse<InlineResponse2006> getInvoicesForCustomerWithHttpInfo(String customerId) throws ApiException {
         com.squareup.okhttp.Call call = getInvoicesForCustomerValidateBeforeCall(customerId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -405,7 +405,7 @@ public class InvoicesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getInvoicesForCustomerAsync(String customerId, final ApiCallback<InlineResponse2004> callback) throws ApiException {
+    public com.squareup.okhttp.Call getInvoicesForCustomerAsync(String customerId, final ApiCallback<InlineResponse2006> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -427,7 +427,7 @@ public class InvoicesApi {
         }
 
         com.squareup.okhttp.Call call = getInvoicesForCustomerValidateBeforeCall(customerId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

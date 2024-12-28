@@ -19,34 +19,88 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.Price;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 /**
  * InlineResponse20011
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse20011 {
-  @SerializedName("success")
-  private Boolean success = null;
+  @SerializedName("data")
+  private List<Price> data = null;
 
-  public InlineResponse20011 success(Boolean success) {
-    this.success = success;
+  @SerializedName("has_more")
+  private Boolean hasMore = null;
+
+  @SerializedName("last_key")
+  private UUID lastKey = null;
+
+  public InlineResponse20011 data(List<Price> data) {
+    this.data = data;
+    return this;
+  }
+
+  public InlineResponse20011 addDataItem(Price dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<Price>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
    /**
-   * Get success
-   * @return success
+   * Get data
+   * @return data
   **/
   @Schema(description = "")
-  public Boolean isSuccess() {
-    return success;
+  public List<Price> getData() {
+    return data;
   }
 
-  public void setSuccess(Boolean success) {
-    this.success = success;
+  public void setData(List<Price> data) {
+    this.data = data;
+  }
+
+  public InlineResponse20011 hasMore(Boolean hasMore) {
+    this.hasMore = hasMore;
+    return this;
+  }
+
+   /**
+   * Get hasMore
+   * @return hasMore
+  **/
+  @Schema(description = "")
+  public Boolean isHasMore() {
+    return hasMore;
+  }
+
+  public void setHasMore(Boolean hasMore) {
+    this.hasMore = hasMore;
+  }
+
+  public InlineResponse20011 lastKey(UUID lastKey) {
+    this.lastKey = lastKey;
+    return this;
+  }
+
+   /**
+   * Get lastKey
+   * @return lastKey
+  **/
+  @Schema(description = "")
+  public UUID getLastKey() {
+    return lastKey;
+  }
+
+  public void setLastKey(UUID lastKey) {
+    this.lastKey = lastKey;
   }
 
 
@@ -59,12 +113,14 @@ public class InlineResponse20011 {
       return false;
     }
     InlineResponse20011 inlineResponse20011 = (InlineResponse20011) o;
-    return Objects.equals(this.success, inlineResponse20011.success);
+    return Objects.equals(this.data, inlineResponse20011.data) &&
+        Objects.equals(this.hasMore, inlineResponse20011.hasMore) &&
+        Objects.equals(this.lastKey, inlineResponse20011.lastKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(success);
+    return Objects.hash(data, hasMore, lastKey);
   }
 
 
@@ -73,7 +129,9 @@ public class InlineResponse20011 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse20011 {\n");
     
-    sb.append("    success: ").append(toIndentedString(success)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    hasMore: ").append(toIndentedString(hasMore)).append("\n");
+    sb.append("    lastKey: ").append(toIndentedString(lastKey)).append("\n");
     sb.append("}");
     return sb.toString();
   }

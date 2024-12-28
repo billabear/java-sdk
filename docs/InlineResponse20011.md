@@ -3,4 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **Boolean** |  |  [optional]
+**data** | [**List&lt;Price&gt;**](Price.md) |  |  [optional]
+**hasMore** | **Boolean** |  |  [optional]
+**lastKey** | [**UUID**](UUID.md) |  |  [optional]

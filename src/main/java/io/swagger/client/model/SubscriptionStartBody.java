@@ -27,7 +27,7 @@ import java.util.UUID;
  * SubscriptionStartBody
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class SubscriptionStartBody {
   @SerializedName("subscription_plan")
@@ -100,6 +100,9 @@ public class SubscriptionStartBody {
 
   @SerializedName("deny_trial")
   private Bool denyTrial = null;
+
+  @SerializedName("metadata")
+  private Object metadata = null;
 
   public SubscriptionStartBody subscriptionPlan(UUID subscriptionPlan) {
     this.subscriptionPlan = subscriptionPlan;
@@ -245,6 +248,24 @@ public class SubscriptionStartBody {
     this.denyTrial = denyTrial;
   }
 
+  public SubscriptionStartBody metadata(Object metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+   /**
+   * Any metadata you want to add to a subscription
+   * @return metadata
+  **/
+  @Schema(description = "Any metadata you want to add to a subscription")
+  public Object getMetadata() {
+    return metadata;
+  }
+
+  public void setMetadata(Object metadata) {
+    this.metadata = metadata;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -262,12 +283,13 @@ public class SubscriptionStartBody {
         Objects.equals(this.schedule, subscriptionStartBody.schedule) &&
         Objects.equals(this.currency, subscriptionStartBody.currency) &&
         Objects.equals(this.seatNumbrers, subscriptionStartBody.seatNumbrers) &&
-        Objects.equals(this.denyTrial, subscriptionStartBody.denyTrial);
+        Objects.equals(this.denyTrial, subscriptionStartBody.denyTrial) &&
+        Objects.equals(this.metadata, subscriptionStartBody.metadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subscriptionPlan, paymentDetails, cardToken, price, schedule, currency, seatNumbrers, denyTrial);
+    return Objects.hash(subscriptionPlan, paymentDetails, cardToken, price, schedule, currency, seatNumbrers, denyTrial, metadata);
   }
 
 
@@ -284,6 +306,7 @@ public class SubscriptionStartBody {
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    seatNumbrers: ").append(toIndentedString(seatNumbrers)).append("\n");
     sb.append("    denyTrial: ").append(toIndentedString(denyTrial)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

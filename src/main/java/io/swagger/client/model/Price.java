@@ -19,6 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.Metric;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.UUID;
@@ -26,7 +27,7 @@ import java.util.UUID;
  * Price
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class Price {
   @SerializedName("id")
@@ -99,6 +100,9 @@ public class Price {
 
   @SerializedName("public")
   private Boolean _public = null;
+
+  @SerializedName("metric")
+  private Metric metric = null;
 
    /**
    * Get id
@@ -235,6 +239,24 @@ public class Price {
     this._public = _public;
   }
 
+  public Price metric(Metric metric) {
+    this.metric = metric;
+    return this;
+  }
+
+   /**
+   * Get metric
+   * @return metric
+  **/
+  @Schema(description = "")
+  public Metric getMetric() {
+    return metric;
+  }
+
+  public void setMetric(Metric metric) {
+    this.metric = metric;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -252,12 +274,13 @@ public class Price {
         Objects.equals(this.recurring, price.recurring) &&
         Objects.equals(this.schedule, price.schedule) &&
         Objects.equals(this.includingTax, price.includingTax) &&
-        Objects.equals(this._public, price._public);
+        Objects.equals(this._public, price._public) &&
+        Objects.equals(this.metric, price.metric);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, amount, currency, externalReference, recurring, schedule, includingTax, _public);
+    return Objects.hash(id, amount, currency, externalReference, recurring, schedule, includingTax, _public, metric);
   }
 
 
@@ -274,6 +297,7 @@ public class Price {
     sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
     sb.append("    includingTax: ").append(toIndentedString(includingTax)).append("\n");
     sb.append("    _public: ").append(toIndentedString(_public)).append("\n");
+    sb.append("    metric: ").append(toIndentedString(metric)).append("\n");
     sb.append("}");
     return sb.toString();
   }

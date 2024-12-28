@@ -27,7 +27,7 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.Error;
-import io.swagger.client.model.InlineResponse2009;
+import io.swagger.client.model.InlineResponse20011;
 import io.swagger.client.model.Price;
 
 import java.lang.reflect.Type;
@@ -131,12 +131,10 @@ public class PricesApi {
      * Create a price
      * @param body  (required)
      * @param productId The id of the product to retrieve (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String createPrice(Price body, String productId) throws ApiException {
-        ApiResponse<String> resp = createPriceWithHttpInfo(body, productId);
-        return resp.getData();
+    public void createPrice(Price body, String productId) throws ApiException {
+        createPriceWithHttpInfo(body, productId);
     }
 
     /**
@@ -144,13 +142,12 @@ public class PricesApi {
      * Create a price
      * @param body  (required)
      * @param productId The id of the product to retrieve (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> createPriceWithHttpInfo(Price body, String productId) throws ApiException {
+    public ApiResponse<Void> createPriceWithHttpInfo(Price body, String productId) throws ApiException {
         com.squareup.okhttp.Call call = createPriceValidateBeforeCall(body, productId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -162,7 +159,7 @@ public class PricesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createPriceAsync(Price body, String productId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call createPriceAsync(Price body, String productId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -184,8 +181,7 @@ public class PricesApi {
         }
 
         com.squareup.okhttp.Call call = createPriceValidateBeforeCall(body, productId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
     /**
@@ -266,11 +262,11 @@ public class PricesApi {
      * @param productId The id of the product to retrieve (required)
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
-     * @return InlineResponse2009
+     * @return InlineResponse20011
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2009 listPrice(String productId, Integer limit, String lastKey) throws ApiException {
-        ApiResponse<InlineResponse2009> resp = listPriceWithHttpInfo(productId, limit, lastKey);
+    public InlineResponse20011 listPrice(String productId, Integer limit, String lastKey) throws ApiException {
+        ApiResponse<InlineResponse20011> resp = listPriceWithHttpInfo(productId, limit, lastKey);
         return resp.getData();
     }
 
@@ -280,12 +276,12 @@ public class PricesApi {
      * @param productId The id of the product to retrieve (required)
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
-     * @return ApiResponse&lt;InlineResponse2009&gt;
+     * @return ApiResponse&lt;InlineResponse20011&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2009> listPriceWithHttpInfo(String productId, Integer limit, String lastKey) throws ApiException {
+    public ApiResponse<InlineResponse20011> listPriceWithHttpInfo(String productId, Integer limit, String lastKey) throws ApiException {
         com.squareup.okhttp.Call call = listPriceValidateBeforeCall(productId, limit, lastKey, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -299,7 +295,7 @@ public class PricesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listPriceAsync(String productId, Integer limit, String lastKey, final ApiCallback<InlineResponse2009> callback) throws ApiException {
+    public com.squareup.okhttp.Call listPriceAsync(String productId, Integer limit, String lastKey, final ApiCallback<InlineResponse20011> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -321,7 +317,7 @@ public class PricesApi {
         }
 
         com.squareup.okhttp.Call call = listPriceValidateBeforeCall(productId, limit, lastKey, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

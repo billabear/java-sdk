@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **address** | [**Address**](Address.md) |  |  [optional]
 **locale** | **String** | Defaults to &#x27;en&#x27; if not sent. |  [optional]
 **brand** | **String** | Defaults to &#x27;default&#x27; if not sent. |  [optional]
+**invoiceFormat** | [**InvoiceFormatEnum**](#InvoiceFormatEnum) | Choice between &#x27;pdf&#x27; and &#x27;xrechnung&#x27;. &lt;strong&gt;Since 2024.02.01&lt;/strong&gt; |  [optional]
 
 <a name="BillingTypeEnum"></a>
 ## Enum: BillingTypeEnum
@@ -29,3 +30,10 @@ Name | Value
 ---- | -----
 INDIVIDUAL | &quot;individual&quot;
 BUSINESS | &quot;business&quot;
+
+<a name="InvoiceFormatEnum"></a>
+## Enum: InvoiceFormatEnum
+Name | Value
+---- | -----
+PDF | &quot;pdf&quot;
+XRECHNUNG | &quot;xrechnung&quot;

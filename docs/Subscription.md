@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **validUntil** | **String** |  |  [optional]
 **mainExternalReference** | **String** |  |  [optional]
 **childExternalReference** | **String** |  |  [optional]
+**metadata** | **OneOfSubscriptionMetadata** |  |  [optional]
 **price** | [**Price**](Price.md) |  |  [optional]
 **plan** | [**SubscriptionPlan**](SubscriptionPlan.md) |  |  [optional]

@@ -19,110 +19,88 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.SubscriptionPlan;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 /**
  * InlineResponse20012
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse20012 {
-  @SerializedName("paid")
-  private Boolean paid = null;
+  @SerializedName("data")
+  private List<SubscriptionPlan> data = null;
 
-  /**
-   * Gets or Sets failureReason
-   */
-  @JsonAdapter(FailureReasonEnum.Adapter.class)
-  public enum FailureReasonEnum {
-    @SerializedName("expired_card")
-    EXPIRED_CARD("expired_card"),
-    @SerializedName("invalid_details")
-    INVALID_DETAILS("invalid_details"),
-    @SerializedName("fraud")
-    FRAUD("fraud"),
-    @SerializedName("authentication_required")
-    AUTHENTICATION_REQUIRED("authentication_required"),
-    @SerializedName("invalid_card")
-    INVALID_CARD("invalid_card"),
-    @SerializedName("general_decline")
-    GENERAL_DECLINE("general_decline"),
-    @SerializedName("contact_provider")
-    CONTACT_PROVIDER("contact_provider"),
-    @SerializedName("lack_of_funds")
-    LACK_OF_FUNDS("lack_of_funds");
+  @SerializedName("has_more")
+  private Boolean hasMore = null;
 
-    private String value;
+  @SerializedName("last_key")
+  private UUID lastKey = null;
 
-    FailureReasonEnum(String value) {
-      this.value = value;
+  public InlineResponse20012 data(List<SubscriptionPlan> data) {
+    this.data = data;
+    return this;
+  }
+
+  public InlineResponse20012 addDataItem(SubscriptionPlan dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<SubscriptionPlan>();
     }
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-    public static FailureReasonEnum fromValue(String input) {
-      for (FailureReasonEnum b : FailureReasonEnum.values()) {
-        if (b.value.equals(input)) {
-          return b;
-        }
-      }
-      return null;
-    }
-    public static class Adapter extends TypeAdapter<FailureReasonEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final FailureReasonEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
-      }
-
-      @Override
-      public FailureReasonEnum read(final JsonReader jsonReader) throws IOException {
-        Object value = jsonReader.nextString();
-        return FailureReasonEnum.fromValue((String)(value));
-      }
-    }
-  }  @SerializedName("failure_reason")
-  private FailureReasonEnum failureReason = null;
-
-  public InlineResponse20012 paid(Boolean paid) {
-    this.paid = paid;
+    this.data.add(dataItem);
     return this;
   }
 
    /**
-   * Get paid
-   * @return paid
+   * Get data
+   * @return data
   **/
   @Schema(description = "")
-  public Boolean isPaid() {
-    return paid;
+  public List<SubscriptionPlan> getData() {
+    return data;
   }
 
-  public void setPaid(Boolean paid) {
-    this.paid = paid;
+  public void setData(List<SubscriptionPlan> data) {
+    this.data = data;
   }
 
-  public InlineResponse20012 failureReason(FailureReasonEnum failureReason) {
-    this.failureReason = failureReason;
+  public InlineResponse20012 hasMore(Boolean hasMore) {
+    this.hasMore = hasMore;
     return this;
   }
 
    /**
-   * Get failureReason
-   * @return failureReason
+   * Get hasMore
+   * @return hasMore
   **/
   @Schema(description = "")
-  public FailureReasonEnum getFailureReason() {
-    return failureReason;
+  public Boolean isHasMore() {
+    return hasMore;
   }
 
-  public void setFailureReason(FailureReasonEnum failureReason) {
-    this.failureReason = failureReason;
+  public void setHasMore(Boolean hasMore) {
+    this.hasMore = hasMore;
+  }
+
+  public InlineResponse20012 lastKey(UUID lastKey) {
+    this.lastKey = lastKey;
+    return this;
+  }
+
+   /**
+   * Get lastKey
+   * @return lastKey
+  **/
+  @Schema(description = "")
+  public UUID getLastKey() {
+    return lastKey;
+  }
+
+  public void setLastKey(UUID lastKey) {
+    this.lastKey = lastKey;
   }
 
 
@@ -135,13 +113,14 @@ public class InlineResponse20012 {
       return false;
     }
     InlineResponse20012 inlineResponse20012 = (InlineResponse20012) o;
-    return Objects.equals(this.paid, inlineResponse20012.paid) &&
-        Objects.equals(this.failureReason, inlineResponse20012.failureReason);
+    return Objects.equals(this.data, inlineResponse20012.data) &&
+        Objects.equals(this.hasMore, inlineResponse20012.hasMore) &&
+        Objects.equals(this.lastKey, inlineResponse20012.lastKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(paid, failureReason);
+    return Objects.hash(data, hasMore, lastKey);
   }
 
 
@@ -150,8 +129,9 @@ public class InlineResponse20012 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse20012 {\n");
     
-    sb.append("    paid: ").append(toIndentedString(paid)).append("\n");
-    sb.append("    failureReason: ").append(toIndentedString(failureReason)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    hasMore: ").append(toIndentedString(hasMore)).append("\n");
+    sb.append("    lastKey: ").append(toIndentedString(lastKey)).append("\n");
     sb.append("}");
     return sb.toString();
   }

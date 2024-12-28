@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 <a name="addSeatsSubscriptions"></a>
 # **addSeatsSubscriptions**
-> InlineResponse20011 addSeatsSubscriptions(body, subscriptionId)
+> InlineResponse20013 addSeatsSubscriptions(body, subscriptionId)
 
 Add Seats
 
@@ -47,7 +47,7 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 SeatsAddBody body = new SeatsAddBody(); // SeatsAddBody | 
 String subscriptionId = "subscriptionId_example"; // String | The id of the subscription to retrieve
 try {
-    InlineResponse20011 result = apiInstance.addSeatsSubscriptions(body, subscriptionId);
+    InlineResponse20013 result = apiInstance.addSeatsSubscriptions(body, subscriptionId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#addSeatsSubscriptions");
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 <a name="cancelSubscription"></a>
 # **cancelSubscription**
-> String cancelSubscription(body, subscriptionId)
+> cancelSubscription(body, subscriptionId)
 
 Cancel Subscription
 
@@ -104,8 +104,7 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 SubscriptionIdCancelBody body = new SubscriptionIdCancelBody(); // SubscriptionIdCancelBody | 
 String subscriptionId = "subscriptionId_example"; // String | The id of the subscription to retrieve
 try {
-    String result = apiInstance.cancelSubscription(body, subscriptionId);
-    System.out.println(result);
+    apiInstance.cancelSubscription(body, subscriptionId);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#cancelSubscription");
     e.printStackTrace();
@@ -121,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 
@@ -134,7 +133,7 @@ Name | Type | Description  | Notes
 
 <a name="changeSubscriptionPrice"></a>
 # **changeSubscriptionPrice**
-> InlineResponse20011 changeSubscriptionPrice(body, subscriptionId)
+> InlineResponse20013 changeSubscriptionPrice(body, subscriptionId)
 
 Change Price
 
@@ -161,7 +160,7 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 SubscriptionIdPriceBody body = new SubscriptionIdPriceBody(); // SubscriptionIdPriceBody | 
 String subscriptionId = "subscriptionId_example"; // String | The id of the subscription to retrieve
 try {
-    InlineResponse20011 result = apiInstance.changeSubscriptionPrice(body, subscriptionId);
+    InlineResponse20013 result = apiInstance.changeSubscriptionPrice(body, subscriptionId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#changeSubscriptionPrice");
@@ -178,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -362,7 +361,7 @@ Name | Type | Description  | Notes
 
 <a name="getActiveForCustomer"></a>
 # **getActiveForCustomer**
-> InlineResponse2006 getActiveForCustomer(customerId)
+> InlineResponse2008 getActiveForCustomer(customerId)
 
 List Customer Active Subscriptions
 
@@ -388,7 +387,7 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 SubscriptionsApi apiInstance = new SubscriptionsApi();
 String customerId = "customerId_example"; // String | The id of the customer to retrieve
 try {
-    InlineResponse2006 result = apiInstance.getActiveForCustomer(customerId);
+    InlineResponse2008 result = apiInstance.getActiveForCustomer(customerId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getActiveForCustomer");
@@ -404,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -417,7 +416,7 @@ Name | Type | Description  | Notes
 
 <a name="getForCustomer"></a>
 # **getForCustomer**
-> InlineResponse2006 getForCustomer(customerId)
+> InlineResponse2008 getForCustomer(customerId)
 
 List Customer Subscriptions
 
@@ -443,7 +442,7 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 SubscriptionsApi apiInstance = new SubscriptionsApi();
 String customerId = "customerId_example"; // String | The id of the customer to retrieve
 try {
-    InlineResponse2006 result = apiInstance.getForCustomer(customerId);
+    InlineResponse2008 result = apiInstance.getForCustomer(customerId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getForCustomer");
@@ -459,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -472,7 +471,7 @@ Name | Type | Description  | Notes
 
 <a name="listSubscriptionPlans"></a>
 # **listSubscriptionPlans**
-> InlineResponse20010 listSubscriptionPlans(limit, lastKey)
+> InlineResponse20012 listSubscriptionPlans(limit, lastKey)
 
 List Subscription Plans
 
@@ -499,7 +498,7 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 try {
-    InlineResponse20010 result = apiInstance.listSubscriptionPlans(limit, lastKey);
+    InlineResponse20012 result = apiInstance.listSubscriptionPlans(limit, lastKey);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#listSubscriptionPlans");
@@ -516,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -529,7 +528,7 @@ Name | Type | Description  | Notes
 
 <a name="listSubscriptions"></a>
 # **listSubscriptions**
-> InlineResponse2006 listSubscriptions(limit, lastKey)
+> InlineResponse2008 listSubscriptions(limit, lastKey)
 
 List
 
@@ -556,7 +555,7 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 Integer limit = 56; // Integer | How many items to return at one time (max 100)
 String lastKey = "lastKey_example"; // String | The key to be used in pagination to say what the last key of the previous page was
 try {
-    InlineResponse2006 result = apiInstance.listSubscriptions(limit, lastKey);
+    InlineResponse2008 result = apiInstance.listSubscriptions(limit, lastKey);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#listSubscriptions");
@@ -573,7 +572,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -586,7 +585,7 @@ Name | Type | Description  | Notes
 
 <a name="removeSeatsSubscriptions"></a>
 # **removeSeatsSubscriptions**
-> InlineResponse20011 removeSeatsSubscriptions(body, subscriptionId)
+> InlineResponse20013 removeSeatsSubscriptions(body, subscriptionId)
 
 Remove Seats
 
@@ -613,7 +612,7 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 SeatsRemoveBody body = new SeatsRemoveBody(); // SeatsRemoveBody | 
 String subscriptionId = "subscriptionId_example"; // String | The id of the subscription to retrieve
 try {
-    InlineResponse20011 result = apiInstance.removeSeatsSubscriptions(body, subscriptionId);
+    InlineResponse20013 result = apiInstance.removeSeatsSubscriptions(body, subscriptionId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#removeSeatsSubscriptions");
@@ -630,7 +629,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 

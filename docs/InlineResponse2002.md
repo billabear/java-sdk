@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;Refund&gt;**](Refund.md) |  |  [optional]
-**hasMore** | **Boolean** |  |  [optional]
-**lastKey** | [**UUID**](UUID.md) |  |  [optional]
+**limits** | [**List&lt;Limit&gt;**](Limit.md) |  |  [optional]
+**features** | [**List&lt;Feature&gt;**](Feature.md) |  |  [optional]
+**userCount** | **Integer** |  |  [optional]

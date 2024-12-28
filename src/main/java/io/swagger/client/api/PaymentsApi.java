@@ -28,10 +28,10 @@ import java.io.IOException;
 
 import io.swagger.client.model.Error;
 import java.io.File;
-import io.swagger.client.model.InlineResponse20012;
-import io.swagger.client.model.InlineResponse2003;
+import io.swagger.client.model.InlineResponse20014;
 import io.swagger.client.model.InlineResponse2004;
-import io.swagger.client.model.InlineResponse2007;
+import io.swagger.client.model.InlineResponse2006;
+import io.swagger.client.model.InlineResponse2009;
 import io.swagger.client.model.IssueRefundPayment;
 
 import java.lang.reflect.Type;
@@ -129,11 +129,11 @@ public class PaymentsApi {
      * Charge Invoice
      * Attempts to charge a card that is on file for the invoice amount
      * @param invoiceId The id of the invoice (required)
-     * @return InlineResponse20012
+     * @return InlineResponse20014
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse20012 chargeInvoice(String invoiceId) throws ApiException {
-        ApiResponse<InlineResponse20012> resp = chargeInvoiceWithHttpInfo(invoiceId);
+    public InlineResponse20014 chargeInvoice(String invoiceId) throws ApiException {
+        ApiResponse<InlineResponse20014> resp = chargeInvoiceWithHttpInfo(invoiceId);
         return resp.getData();
     }
 
@@ -141,12 +141,12 @@ public class PaymentsApi {
      * Charge Invoice
      * Attempts to charge a card that is on file for the invoice amount
      * @param invoiceId The id of the invoice (required)
-     * @return ApiResponse&lt;InlineResponse20012&gt;
+     * @return ApiResponse&lt;InlineResponse20014&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse20012> chargeInvoiceWithHttpInfo(String invoiceId) throws ApiException {
+    public ApiResponse<InlineResponse20014> chargeInvoiceWithHttpInfo(String invoiceId) throws ApiException {
         com.squareup.okhttp.Call call = chargeInvoiceValidateBeforeCall(invoiceId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -158,7 +158,7 @@ public class PaymentsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call chargeInvoiceAsync(String invoiceId, final ApiCallback<InlineResponse20012> callback) throws ApiException {
+    public com.squareup.okhttp.Call chargeInvoiceAsync(String invoiceId, final ApiCallback<InlineResponse20014> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -180,7 +180,7 @@ public class PaymentsApi {
         }
 
         com.squareup.okhttp.Call call = chargeInvoiceValidateBeforeCall(invoiceId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse20014>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -504,11 +504,11 @@ public class PaymentsApi {
      * List Customer Invoices
      * List Customer Invoices
      * @param customerId The id of the customer to retrieve (required)
-     * @return InlineResponse2004
+     * @return InlineResponse2006
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2004 getInvoicesForCustomer(String customerId) throws ApiException {
-        ApiResponse<InlineResponse2004> resp = getInvoicesForCustomerWithHttpInfo(customerId);
+    public InlineResponse2006 getInvoicesForCustomer(String customerId) throws ApiException {
+        ApiResponse<InlineResponse2006> resp = getInvoicesForCustomerWithHttpInfo(customerId);
         return resp.getData();
     }
 
@@ -516,12 +516,12 @@ public class PaymentsApi {
      * List Customer Invoices
      * List Customer Invoices
      * @param customerId The id of the customer to retrieve (required)
-     * @return ApiResponse&lt;InlineResponse2004&gt;
+     * @return ApiResponse&lt;InlineResponse2006&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2004> getInvoicesForCustomerWithHttpInfo(String customerId) throws ApiException {
+    public ApiResponse<InlineResponse2006> getInvoicesForCustomerWithHttpInfo(String customerId) throws ApiException {
         com.squareup.okhttp.Call call = getInvoicesForCustomerValidateBeforeCall(customerId, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -533,7 +533,7 @@ public class PaymentsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getInvoicesForCustomerAsync(String customerId, final ApiCallback<InlineResponse2004> callback) throws ApiException {
+    public com.squareup.okhttp.Call getInvoicesForCustomerAsync(String customerId, final ApiCallback<InlineResponse2006> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -555,7 +555,7 @@ public class PaymentsApi {
         }
 
         com.squareup.okhttp.Call call = getInvoicesForCustomerValidateBeforeCall(customerId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -641,11 +641,11 @@ public class PaymentsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return InlineResponse2003
+     * @return InlineResponse2004
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2003 getPaymentsForCustomer(String customerId, Integer limit, String lastKey, String name) throws ApiException {
-        ApiResponse<InlineResponse2003> resp = getPaymentsForCustomerWithHttpInfo(customerId, limit, lastKey, name);
+    public InlineResponse2004 getPaymentsForCustomer(String customerId, Integer limit, String lastKey, String name) throws ApiException {
+        ApiResponse<InlineResponse2004> resp = getPaymentsForCustomerWithHttpInfo(customerId, limit, lastKey, name);
         return resp.getData();
     }
 
@@ -656,12 +656,12 @@ public class PaymentsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return ApiResponse&lt;InlineResponse2003&gt;
+     * @return ApiResponse&lt;InlineResponse2004&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2003> getPaymentsForCustomerWithHttpInfo(String customerId, Integer limit, String lastKey, String name) throws ApiException {
+    public ApiResponse<InlineResponse2004> getPaymentsForCustomerWithHttpInfo(String customerId, Integer limit, String lastKey, String name) throws ApiException {
         com.squareup.okhttp.Call call = getPaymentsForCustomerValidateBeforeCall(customerId, limit, lastKey, name, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -676,7 +676,7 @@ public class PaymentsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPaymentsForCustomerAsync(String customerId, Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2003> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPaymentsForCustomerAsync(String customerId, Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2004> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -698,7 +698,7 @@ public class PaymentsApi {
         }
 
         com.squareup.okhttp.Call call = getPaymentsForCustomerValidateBeforeCall(customerId, limit, lastKey, name, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -777,11 +777,11 @@ public class PaymentsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return InlineResponse2007
+     * @return InlineResponse2009
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2007 listPayment(Integer limit, String lastKey, String name) throws ApiException {
-        ApiResponse<InlineResponse2007> resp = listPaymentWithHttpInfo(limit, lastKey, name);
+    public InlineResponse2009 listPayment(Integer limit, String lastKey, String name) throws ApiException {
+        ApiResponse<InlineResponse2009> resp = listPaymentWithHttpInfo(limit, lastKey, name);
         return resp.getData();
     }
 
@@ -791,12 +791,12 @@ public class PaymentsApi {
      * @param limit How many items to return at one time (max 100) (optional)
      * @param lastKey The key to be used in pagination to say what the last key of the previous page was (optional)
      * @param name The name to search for (optional)
-     * @return ApiResponse&lt;InlineResponse2007&gt;
+     * @return ApiResponse&lt;InlineResponse2009&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2007> listPaymentWithHttpInfo(Integer limit, String lastKey, String name) throws ApiException {
+    public ApiResponse<InlineResponse2009> listPaymentWithHttpInfo(Integer limit, String lastKey, String name) throws ApiException {
         com.squareup.okhttp.Call call = listPaymentValidateBeforeCall(limit, lastKey, name, null, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -810,7 +810,7 @@ public class PaymentsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listPaymentAsync(Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2007> callback) throws ApiException {
+    public com.squareup.okhttp.Call listPaymentAsync(Integer limit, String lastKey, String name, final ApiCallback<InlineResponse2009> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -832,7 +832,7 @@ public class PaymentsApi {
         }
 
         com.squareup.okhttp.Call call = listPaymentValidateBeforeCall(limit, lastKey, name, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -912,12 +912,10 @@ public class PaymentsApi {
      * Issue a refund for payment
      * @param body  (required)
      * @param paymentId The id of the payment (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String refundPayment(IssueRefundPayment body, String paymentId) throws ApiException {
-        ApiResponse<String> resp = refundPaymentWithHttpInfo(body, paymentId);
-        return resp.getData();
+    public void refundPayment(IssueRefundPayment body, String paymentId) throws ApiException {
+        refundPaymentWithHttpInfo(body, paymentId);
     }
 
     /**
@@ -925,13 +923,12 @@ public class PaymentsApi {
      * Issue a refund for payment
      * @param body  (required)
      * @param paymentId The id of the payment (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> refundPaymentWithHttpInfo(IssueRefundPayment body, String paymentId) throws ApiException {
+    public ApiResponse<Void> refundPaymentWithHttpInfo(IssueRefundPayment body, String paymentId) throws ApiException {
         com.squareup.okhttp.Call call = refundPaymentValidateBeforeCall(body, paymentId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return apiClient.execute(call);
     }
 
     /**
@@ -943,7 +940,7 @@ public class PaymentsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call refundPaymentAsync(IssueRefundPayment body, String paymentId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call refundPaymentAsync(IssueRefundPayment body, String paymentId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -965,8 +962,7 @@ public class PaymentsApi {
         }
 
         com.squareup.okhttp.Call call = refundPaymentValidateBeforeCall(body, paymentId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        apiClient.executeAsync(call, callback);
         return call;
     }
 }

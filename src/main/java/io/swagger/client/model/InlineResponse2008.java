@@ -19,7 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.Product;
+import io.swagger.client.model.Subscription;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +29,11 @@ import java.util.UUID;
  * InlineResponse2008
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-07-21T17:32:45.393056317Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
 
 public class InlineResponse2008 {
   @SerializedName("data")
-  private List<Product> data = null;
+  private List<Subscription> data = null;
 
   @SerializedName("has_more")
   private Boolean hasMore = null;
@@ -41,14 +41,14 @@ public class InlineResponse2008 {
   @SerializedName("last_key")
   private UUID lastKey = null;
 
-  public InlineResponse2008 data(List<Product> data) {
+  public InlineResponse2008 data(List<Subscription> data) {
     this.data = data;
     return this;
   }
 
-  public InlineResponse2008 addDataItem(Product dataItem) {
+  public InlineResponse2008 addDataItem(Subscription dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<Product>();
+      this.data = new ArrayList<Subscription>();
     }
     this.data.add(dataItem);
     return this;
@@ -59,11 +59,11 @@ public class InlineResponse2008 {
    * @return data
   **/
   @Schema(description = "")
-  public List<Product> getData() {
+  public List<Subscription> getData() {
     return data;
   }
 
-  public void setData(List<Product> data) {
+  public void setData(List<Subscription> data) {
     this.data = data;
   }
 
