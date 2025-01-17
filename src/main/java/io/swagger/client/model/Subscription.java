@@ -28,7 +28,7 @@ import java.util.UUID;
  * Subscription
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-17T11:40:00.098774036Z[Etc/UTC]")
 
 public class Subscription {
   @SerializedName("id")
@@ -62,7 +62,7 @@ public class Subscription {
   private String childExternalReference = null;
 
   @SerializedName("metadata")
-  private OneOfSubscriptionMetadata metadata = null;
+  private Object metadata = null;
 
   @SerializedName("price")
   private Price price = null;
@@ -250,7 +250,7 @@ public class Subscription {
     this.childExternalReference = childExternalReference;
   }
 
-  public Subscription metadata(OneOfSubscriptionMetadata metadata) {
+  public Subscription metadata(Object metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -260,11 +260,11 @@ public class Subscription {
    * @return metadata
   **/
   @Schema(description = "")
-  public OneOfSubscriptionMetadata getMetadata() {
+  public Object getMetadata() {
     return metadata;
   }
 
-  public void setMetadata(OneOfSubscriptionMetadata metadata) {
+  public void setMetadata(Object metadata) {
     this.metadata = metadata;
   }
 

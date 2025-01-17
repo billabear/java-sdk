@@ -27,7 +27,7 @@ import java.util.UUID;
  * Customer
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-28T15:35:57.107133003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-17T11:40:00.098774036Z[Etc/UTC]")
 
 public class Customer {
   @SerializedName("id")
@@ -197,6 +197,9 @@ public class Customer {
     }
   }  @SerializedName("invoice_format")
   private InvoiceFormatEnum invoiceFormat = null;
+
+  @SerializedName("marketing_opt_in")
+  private Boolean marketingOptIn = null;
 
   public Customer id(UUID id) {
     this.id = id;
@@ -432,6 +435,24 @@ public class Customer {
     this.invoiceFormat = invoiceFormat;
   }
 
+  public Customer marketingOptIn(Boolean marketingOptIn) {
+    this.marketingOptIn = marketingOptIn;
+    return this;
+  }
+
+   /**
+   * If the customer has opted in for marketing
+   * @return marketingOptIn
+  **/
+  @Schema(description = "If the customer has opted in for marketing")
+  public Boolean isMarketingOptIn() {
+    return marketingOptIn;
+  }
+
+  public void setMarketingOptIn(Boolean marketingOptIn) {
+    this.marketingOptIn = marketingOptIn;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -454,12 +475,13 @@ public class Customer {
         Objects.equals(this.address, customer.address) &&
         Objects.equals(this.locale, customer.locale) &&
         Objects.equals(this.brand, customer.brand) &&
-        Objects.equals(this.invoiceFormat, customer.invoiceFormat);
+        Objects.equals(this.invoiceFormat, customer.invoiceFormat) &&
+        Objects.equals(this.marketingOptIn, customer.marketingOptIn);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, email, taxNumber, standardTaxRate, digitalTaxRate, billingType, type, reference, externalReference, address, locale, brand, invoiceFormat);
+    return Objects.hash(id, email, taxNumber, standardTaxRate, digitalTaxRate, billingType, type, reference, externalReference, address, locale, brand, invoiceFormat, marketingOptIn);
   }
 
 
@@ -481,6 +503,7 @@ public class Customer {
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    brand: ").append(toIndentedString(brand)).append("\n");
     sb.append("    invoiceFormat: ").append(toIndentedString(invoiceFormat)).append("\n");
+    sb.append("    marketingOptIn: ").append(toIndentedString(marketingOptIn)).append("\n");
     sb.append("}");
     return sb.toString();
   }
