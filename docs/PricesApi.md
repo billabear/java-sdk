@@ -18,11 +18,11 @@ Create a price
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PricesApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PricesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -74,11 +74,11 @@ List all prices
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PricesApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PricesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

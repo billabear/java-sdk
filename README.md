@@ -1,8 +1,8 @@
-# swagger-java-client
+# sdk
 
 BillaBear
 - API version: 1.0.0
-  - Build date: 2024-07-21T17:32:45.393056317Z[Etc/UTC]
+  - Build date: 2025-01-25T11:57:02.849979787Z[Etc/UTC]
 
 The REST API provided by BillaBear
 
@@ -39,9 +39,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>io.swagger</groupId>
-  <artifactId>swagger-java-client</artifactId>
-  <version>1.0.0</version>
+  <groupId>com.billabear</groupId>
+  <artifactId>sdk</artifactId>
+  <version>1.1.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:swagger-java-client:1.0.0"
+compile "com.billabear:sdk:1.1.0"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/swagger-java-client-1.0.0.jar`
+* `target/sdk-1.1.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -72,10 +72,10 @@ Then manually install the following JARs:
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
-import BillaBear.*;
-import BillaBear.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.CheckoutApi;
+import com.billabear.sdk.invoker.*;
+import com.billabear.sdk.invoker.auth.*;
+import com.billabear.sdk.model.*;
+import com.billabear.sdk.api.CheckoutApi;
 
 import java.io.File;
 import java.util.*;
@@ -114,12 +114,16 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**addSeatsSubscriptions**](docs/CustomersApi.md#addSeatsSubscriptions) | **POST** /subscription/{subscriptionId}/seats/add | Add Seats
 *CustomersApi* | [**applyVoucherToCustomer**](docs/CustomersApi.md#applyVoucherToCustomer) | **POST** /customer/{customerId}/voucher | Apply voucher
 *CustomersApi* | [**createCustomer**](docs/CustomersApi.md#createCustomer) | **POST** /customer | Create
+*CustomersApi* | [**createCustomerUsageLimit**](docs/CustomersApi.md#createCustomerUsageLimit) | **POST** /customer/{customerId}/uasge-limit | Create Usage Limit
+*CustomersApi* | [**customerCustomerIdUasgeLimitLimitIdDelete**](docs/CustomersApi.md#customerCustomerIdUasgeLimitLimitIdDelete) | **DELETE** /customer/{customerId}/uasge-limit/{limitId} | Delete Usage Limit
 *CustomersApi* | [**disableCustomer**](docs/CustomersApi.md#disableCustomer) | **POST** /customer/{customerId}/disable | Disable Customer
 *CustomersApi* | [**enableCustomer**](docs/CustomersApi.md#enableCustomer) | **POST** /customer/{customerId}/enable | Enable Customer
 *CustomersApi* | [**getActiveForCustomer**](docs/CustomersApi.md#getActiveForCustomer) | **GET** /customer/{customerId}/subscription/active | List Customer Active Subscriptions
 *CustomersApi* | [**getAllCustomers**](docs/CustomersApi.md#getAllCustomers) | **GET** /customer | List
 *CustomersApi* | [**getCustomerById**](docs/CustomersApi.md#getCustomerById) | **GET** /customer/{customerId} | Detail
+*CustomersApi* | [**getCustomerCosts**](docs/CustomersApi.md#getCustomerCosts) | **GET** /customer/{customerId}/costs | Usage Cost Estimate
 *CustomersApi* | [**getCustomerLimitsById**](docs/CustomersApi.md#getCustomerLimitsById) | **GET** /customer/{customerId}/limits | Fetch Customer Limits
+*CustomersApi* | [**getCustomerUsageLimitsById**](docs/CustomersApi.md#getCustomerUsageLimitsById) | **GET** /customer/{customerId}/uasge-limit | Fetch Customer Usage Limits
 *CustomersApi* | [**getForCustomer**](docs/CustomersApi.md#getForCustomer) | **GET** /customer/{customerId}/subscription | List Customer Subscriptions
 *CustomersApi* | [**getInvoicesForCustomer**](docs/CustomersApi.md#getInvoicesForCustomer) | **GET** /customer/{customerId}/invoices | List Customer Invoices
 *CustomersApi* | [**getPaymentsForCustomer**](docs/CustomersApi.md#getPaymentsForCustomer) | **GET** /customer/{customerId}/payment | List Customer Payments
@@ -168,6 +172,11 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**removeSeatsSubscriptions**](docs/SubscriptionsApi.md#removeSeatsSubscriptions) | **POST** /subscription/{subscriptionId}/seats/remove | Remove Seats
 *SubscriptionsApi* | [**showSubscriptionById**](docs/SubscriptionsApi.md#showSubscriptionById) | **GET** /subscription/{subscriptionId} | Detail
 *SubscriptionsApi* | [**startTrial**](docs/SubscriptionsApi.md#startTrial) | **POST** /customer/{customerId}/subscription/trial | Start Trial Subscription For Customer
+*UsageApi* | [**createCustomerUsageLimit**](docs/UsageApi.md#createCustomerUsageLimit) | **POST** /customer/{customerId}/uasge-limit | Create Usage Limit
+*UsageApi* | [**createEvent**](docs/UsageApi.md#createEvent) | **POST** /events | Create Event
+*UsageApi* | [**customerCustomerIdUasgeLimitLimitIdDelete**](docs/UsageApi.md#customerCustomerIdUasgeLimitLimitIdDelete) | **DELETE** /customer/{customerId}/uasge-limit/{limitId} | Delete Usage Limit
+*UsageApi* | [**getCustomerCosts**](docs/UsageApi.md#getCustomerCosts) | **GET** /customer/{customerId}/costs | Usage Cost Estimate
+*UsageApi* | [**getCustomerUsageLimitsById**](docs/UsageApi.md#getCustomerUsageLimitsById) | **GET** /customer/{customerId}/uasge-limit | Fetch Customer Usage Limits
 
 ## Documentation for Models
 
@@ -176,8 +185,11 @@ Class | Method | HTTP request | Description
  - [CheckoutBody](docs/CheckoutBody.md)
  - [CheckoutItems](docs/CheckoutItems.md)
  - [CheckoutSubscriptions](docs/CheckoutSubscriptions.md)
+ - [Cost](docs/Cost.md)
  - [Customer](docs/Customer.md)
+ - [CustomerIdUasgelimitBody](docs/CustomerIdUasgelimitBody.md)
  - [Error](docs/Error.md)
+ - [Event](docs/Event.md)
  - [Feature](docs/Feature.md)
  - [FrontendToken](docs/FrontendToken.md)
  - [InlineResponse200](docs/InlineResponse200.md)
@@ -185,16 +197,18 @@ Class | Method | HTTP request | Description
  - [InlineResponse20010](docs/InlineResponse20010.md)
  - [InlineResponse20011](docs/InlineResponse20011.md)
  - [InlineResponse20012](docs/InlineResponse20012.md)
+ - [InlineResponse20013](docs/InlineResponse20013.md)
+ - [InlineResponse20014](docs/InlineResponse20014.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
- - [InlineResponse2007Data](docs/InlineResponse2007Data.md)
- - [InlineResponse2007Receipts](docs/InlineResponse2007Receipts.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse2009](docs/InlineResponse2009.md)
+ - [InlineResponse2009Data](docs/InlineResponse2009Data.md)
+ - [InlineResponse2009Receipts](docs/InlineResponse2009Receipts.md)
  - [InlineResponse201](docs/InlineResponse201.md)
  - [InlineResponse201Lines](docs/InlineResponse201Lines.md)
  - [InlineResponse400](docs/InlineResponse400.md)
@@ -202,6 +216,9 @@ Class | Method | HTTP request | Description
  - [InvoiceLines](docs/InvoiceLines.md)
  - [IssueRefundPayment](docs/IssueRefundPayment.md)
  - [Limit](docs/Limit.md)
+ - [Metric](docs/Metric.md)
+ - [MetricCost](docs/MetricCost.md)
+ - [MetricFilter](docs/MetricFilter.md)
  - [PaymentDetails](docs/PaymentDetails.md)
  - [Price](docs/Price.md)
  - [Product](docs/Product.md)
@@ -217,6 +234,7 @@ Class | Method | HTTP request | Description
  - [SubscriptionPlan](docs/SubscriptionPlan.md)
  - [SubscriptionStartBody](docs/SubscriptionStartBody.md)
  - [SubscriptionTrialBody](docs/SubscriptionTrialBody.md)
+ - [UsageLimit](docs/UsageLimit.md)
  - [VoucherCode](docs/VoucherCode.md)
 
 ## Documentation for Authorization

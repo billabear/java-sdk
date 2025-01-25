@@ -29,11 +29,11 @@ Adds seats to a per seat subscription&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -86,11 +86,11 @@ Info for a specific subscription
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -142,11 +142,11 @@ Changes the price being used for a price. Useful for changing pricing schedule o
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -199,11 +199,11 @@ Create subscription for a customer
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -256,11 +256,11 @@ Change the subscription plan for a customer
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -313,11 +313,11 @@ Extend a trial subscription so it&#x27;s converted from a trial to a normal subs
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -370,11 +370,11 @@ List all Active customer subscriptions
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -425,11 +425,11 @@ List all customer subscriptions&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1.1&lt;/s
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -480,11 +480,11 @@ List all subscriptions plans
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -537,11 +537,11 @@ List all subscriptions
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -594,11 +594,11 @@ Remove seats to a per seat subscription&lt;br&gt;&lt;br&gt;&lt;strong&gt;Since 1
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -651,11 +651,11 @@ Info for a specific subscription
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -706,11 +706,11 @@ Start subscription for a customer
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.SubscriptionsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.SubscriptionsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

@@ -19,11 +19,11 @@ List Customer Refund
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.RefundsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.RefundsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -80,11 +80,11 @@ List all refund
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.RefundsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.RefundsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -139,11 +139,11 @@ Info for a specific Refund
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.RefundsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.RefundsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

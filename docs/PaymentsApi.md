@@ -23,11 +23,11 @@ Attempts to charge a card that is on file for the invoice amount
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PaymentsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PaymentsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -78,11 +78,11 @@ Returns the pdf blob for the invoice
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PaymentsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PaymentsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -133,11 +133,11 @@ Returns the pdf blob for the Receipt
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PaymentsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PaymentsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -188,11 +188,11 @@ List Customer Invoices
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PaymentsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PaymentsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -243,11 +243,11 @@ List Customer Payment
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PaymentsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PaymentsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -304,11 +304,11 @@ List all payment
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PaymentsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PaymentsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -363,11 +363,11 @@ Issue a refund for payment
 ### Example
 ```java
 // Import classes:
-//import BillaBear.ApiClient;
-//import BillaBear.ApiException;
-//import BillaBear.Configuration;
-//import BillaBear.auth.*;
-//import io.swagger.client.api.PaymentsApi;
+//import com.billabear.sdk.invoker.ApiClient;
+//import com.billabear.sdk.invoker.ApiException;
+//import com.billabear.sdk.invoker.Configuration;
+//import com.billabear.sdk.invoker.auth.*;
+//import com.billabear.sdk.api.PaymentsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
